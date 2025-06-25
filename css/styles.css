@@ -1,0 +1,146 @@
+/* 
+    Colour Palette
+    Light Mode
+
+    Headers – #ff5a70
+    Accents – #ffb97b
+    Links  – #ef6d3e
+    Text    – #6c2c15
+    Background - #ffe5d0
+    Header Text - #fffcea
+    "White"   - #fffefb
+
+    Dark Mode
+    To be decided!
+*/
+
+:root,
+    :root.light {
+        --bg-color: #ffe5d0;
+        --white: #fffefb;
+        --header-text: #fffcea;
+        --text: #6c2c15;
+        --link: #ef6d3e;
+        --accent: #ffb97b;
+        --header: #ff5a70;
+    }
+
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text);
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    visibility: hidden;
+}
+
+.mobile-flex {
+    display: flex;
+    justify-content: center;
+}
+
+/* Utility Styles */
+/* To be used later for hamburger menu */
+menu {
+    position: absolute;
+    display: hidden;
+}
+
+header {
+    padding: 0 1rem;
+}
+
+header,
+footer {
+    background-color: var(--header);
+    color: var(--header-text);
+    text-align: center;
+    line-height: 5rem;
+}
+
+header svg {
+    fill: var(--bg-color);
+    width: 4rem;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+
+main h2 {
+    width: 100.7%;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    background-color: var(--header);
+    border-radius: 15px 15px 0 0;
+    color: var(--header-text);
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+main section {
+    position: relative;
+    margin: 3rem 2rem;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 15px;
+    border: solid 2px var(--header);
+    text-align: center;
+}
+
+section.notice {
+    border: dashed 2px var(--header);
+}
+
+/* Navigation */
+header a, 
+header a:link, 
+header a:visited {
+    color: var(--header-text);
+    padding: 0.5rem 1rem;
+}
+
+a {
+    color: var(--link);
+}
+
+a:link,  a:visited {
+    color: var(--link);
+}
+
+a:hover, a:active {
+    color: var(--accent);
+} 
+
+/* Media Queries */
+@media screen and (min-width: 576px) {
+    .flex {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+    
+    nav {
+        justify-content: space-between;
+    }
+
+    .menu {
+        justify-content: flex-end;
+        display: visible;
+        position: relative;
+    }
+}
