@@ -37,6 +37,11 @@ body {
     color: var(--text);
 }
 
+main {
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
 .sr-only {
     position: absolute;
     left: -9999px;
@@ -80,29 +85,31 @@ footer {
 }
 
 main h2 {
-    width: 100.7%;
-    overflow: hidden;
-    padding: 0.5rem 1rem;
     background-color: var(--header);
-    border-radius: 15px 15px 0 0;
     color: var(--header-text);
     position: absolute;
+    padding: 0.5rem 1rem;
+    margin: 0 0 0 -1px;
+    width: 100%;
     top: -2rem;
     left: 50%;
     transform: translate(-50%, 0);
+    border-radius: 15px 15px 0 0;
 }
 
 main section {
     position: relative;
-    margin: 3rem 2rem;
-    padding: 2rem;
-    background-color: var(--white);
-    border-radius: 15px;
-    border: solid 2px var(--header);
-    text-align: center;
+    margin: 4rem 2rem;
 }
 
-section.notice {
+main section > div {
+    background-color: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
+}
+
+section div.notice {
     border: dashed 2px var(--header);
 }
 
