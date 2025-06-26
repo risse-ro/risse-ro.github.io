@@ -18,9 +18,14 @@ html {
 
 body {
     font-size: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: var(--bg-color);
     color: var(--text);
+}
+
+h2 {
+    font-family: "Archivo", sans-serif;
+    color: var(--header-text);
 }
 
 p {
@@ -47,16 +52,17 @@ menu {
     display: hidden;
 }
 
-header {
-    padding: 0 1rem;
-}
-
 header,
 footer {
     background-color: var(--header);
     color: var(--header-text);
     text-align: center;
     line-height: 5rem;
+}
+
+header {
+    padding: 0 1rem;
+    background-image: linear-gradient(to right, var(--header) , var(--accent));
 }
 
 header svg {
@@ -66,7 +72,6 @@ header svg {
 
 main h2 {
     background-color: var(--header);
-    color: var(--header-text);
     position: absolute;
     padding: 1rem 1rem;
     margin: 0 0 0 -1px;
@@ -84,7 +89,7 @@ main section {
 
 main section>div {
     background-color: var(--white);
-    padding: 3rem 2rem 2rem 2rem;
+    padding: 3.5rem 2rem 2rem 2rem;
     text-align: center;
     border-radius: 15px;
 }
@@ -95,17 +100,22 @@ section div.notice {
 
 /* About Section */
 .about-pic {
+    width: 80px;
+    height: 80px;
+    padding: 0;
     position: absolute;
-    padding: 1rem;
     right: 0.5rem;
-    top: -3rem;
-    border: solid 2px var(--header);
+    top: -2.4rem;
+    border: solid 3px var(--header);
     border-radius: 50%;
+    overflow: hidden;
 }
 
-.about-pic>img {
-    width: 3.25rem;
+.about-pic img {
+  width: 100%;
+  object-fit: cover;
 }
+
 
 /* Project Section */
 
