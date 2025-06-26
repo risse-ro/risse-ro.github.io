@@ -1,29 +1,15 @@
-/* 
-    Colour Palette
-    Light Mode
-
-    Headers – #ff5a70
-    Accents – #ffb97b
-    Links  – #ef6d3e
-    Text    – #6c2c15
-    Background - #ffe5d0
-    Header Text - #fffcea
-    "White"   - #fffefb
-
-    Dark Mode
-    To be decided!
-*/
+/* Basic Styles */
 
 :root,
-    :root.light {
-        --bg-color: #ffe5d0;
-        --white: #fffefb;
-        --header-text: #fffcea;
-        --text: #6c2c15;
-        --link: #ef6d3e;
-        --accent: #ffb97b;
-        --header: #ff5a70;
-    }
+:root.light {
+    --bg-color: #ffe5d0;
+    --white: #fffefb;
+    --header-text: #fffcea;
+    --text: #6c2c15;
+    --link: #ef6d3e;
+    --accent: #ffb97b;
+    --header: #ff5a70;
+}
 
 
 html {
@@ -37,7 +23,7 @@ body {
     color: var(--text);
 }
 
-main {
+p {
     max-width: 80ch;
     margin: 0 auto;
 }
@@ -54,7 +40,7 @@ main {
     justify-content: center;
 }
 
-/* Utility Styles */
+/* Header, Footer and Main */
 /* To be used later for hamburger menu */
 menu {
     position: absolute;
@@ -78,17 +64,11 @@ header svg {
     width: 4rem;
 }
 
-footer {
-    position: sticky;
-    bottom: 0;
-    left: 0;
-}
-
 main h2 {
     background-color: var(--header);
     color: var(--header-text);
     position: absolute;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     margin: 0 0 0 -1px;
     width: 100%;
     top: -2rem;
@@ -102,9 +82,9 @@ main section {
     margin: 4rem 2rem;
 }
 
-main section > div {
+main section>div {
     background-color: var(--white);
-    padding: 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     text-align: center;
     border-radius: 15px;
 }
@@ -113,9 +93,35 @@ section div.notice {
     border: dashed 2px var(--header);
 }
 
+/* About Section */
+.about-pic {
+    position: absolute;
+    padding: 1rem;
+    right: 0.5rem;
+    top: -3rem;
+    border: solid 2px var(--header);
+    border-radius: 50%;
+}
+
+.about-pic>img {
+    width: 3.25rem;
+}
+
+/* Project Section */
+
+.project-list {
+    background-color: unset;
+}
+
+.project-list>div {
+    background-color: var(--header);
+    width: 100%;
+    margin: 1rem auto;
+}
+
 /* Navigation */
-header a, 
-header a:link, 
+header a,
+header a:link,
 header a:visited {
     color: var(--header-text);
     padding: 0.5rem 1rem;
@@ -125,13 +131,15 @@ a {
     color: var(--link);
 }
 
-a:link,  a:visited {
+a:link,
+a:visited {
     color: var(--link);
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
     color: var(--accent);
-} 
+}
 
 /* Media Queries */
 @media screen and (min-width: 576px) {
@@ -140,7 +148,7 @@ a:hover, a:active {
         flex-flow: row wrap;
         align-items: center;
     }
-    
+
     nav {
         justify-content: space-between;
     }
@@ -149,5 +157,17 @@ a:hover, a:active {
         justify-content: flex-end;
         display: visible;
         position: relative;
+    }
+
+    .project-list>div {
+        background-color: var(--header);
+        width: 45%;
+        margin: 1rem auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        padding: 0 20rem;
     }
 }
