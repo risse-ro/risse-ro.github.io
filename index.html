@@ -8,11 +8,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Cherisse Rogers">
+    <meta name="author" content="Cher Rogers">
 
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -21,7 +23,7 @@
 
 <body>
     <header>
-        <h1 class="sr-only">Cherisse's Portfolio</h1>
+        <h1 class="sr-only">Cher's Portfolio</h1>
         <nav class="flex">
             <section class="site-id mobile-flex flex">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,6 +35,7 @@
                         stroke="#fffcea" stroke-width="1.5" />
                 </svg>
                 <h2><a href="index.html">risse-ro portfolio</a></h2>
+                <img src="img/nerd-dog-favicon.png">
             </section>
             <!-- TODO: Hamburger menu here later-->
             <ol class="menu flex">
@@ -43,18 +46,17 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Notice 🔧</h2>
+        <section class="fancy-section">
+            <h3>Notice 🔧</h3>
             <div class="notice">
-                <p>This website is a work in progress! Don't mind the mess around here! 👷‍♀️
+                <p>This website is a work in progress! Don't mind the mess around here! 👷‍♀️              <a href="#">Test Link</a>
                 </p>
-                <a href="#">Test Link</a>
             </div>
         </section>
-        <section>
-            <h2>About</h2>
+        <section class="about fancy-section">
+            <h3>About</h3>
             <div class="about-pic">
-                <img src="img/pleased-cat.png" alt="#">
+                <img src="img/shiba-squish.gif" alt="#">
             </div>
             <div>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates optio repellat iusto
@@ -63,32 +65,51 @@
             </div>
         </section>
         <section>
-            <h2>Projects</h2>
+            <h2>Technical Skills</h2>
             <div>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates optio repellat iusto
                     praesentium? Neque excepturi dolores minima, voluptates minus labore quos, nesciunt earum cupiditate
                     sed dolore enim adipisci rerum praesentium?</p>
             </div>
-            <div class="project-list flex">
-                <div>
-                    <img src="img/nerd-dog-favicon.png" alt="#">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae saepe dolores? Fugiat dicta numquam corrupti doloremque amet, ad ipsam, praesentium exercitationem repudiandae architecto quo aliquid. Et impedit accusamus ducimus!</p>
+            <h2>Projects</h2>
+            <div class="card-section flex">
+                <div class="card-item">
+                    <img src="img/pleased-cat.png" alt="#">
+                    <div class="card-text">
+                        <h4>...This Website!</h4>
+                        <ul class="tags mobile-flex">
+                            <li>Example</li>
+                            <li>Of</li>
+                            <li>Tags</li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae saepe dolores?
+                            Fugiat dicta numquam corrupti doloremque amet, ad ipsam, praesentium exercitationem
+                            repudiandae architecto quo aliquid. Et impedit accusamus ducimus!</p>
+                    </div>
                 </div>
-                                <div>
+                <div class="card-item">
                     <img src="img/nerd-dog-favicon.png" alt="#">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae saepe dolores? Fugiat dicta numquam corrupti doloremque amet, ad ipsam, praesentium exercitationem repudiandae architecto quo aliquid. Et impedit accusamus ducimus!</p>
+                    <div class="card-text">
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae saepe dolores?
+                            Fugiat dicta numquam corrupti doloremque amet, ad ipsam, praesentium exercitationem
+                            repudiandae architecto quo aliquid. Et impedit accusamus ducimus!</p>
+                    </div>
                 </div>
-                                <div>
+                <div class="card-item">
                     <img src="img/nerd-dog-favicon.png" alt="#">
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae saepe dolores? Fugiat dicta numquam corrupti doloremque amet, ad ipsam, praesentium exercitationem repudiandae architecto quo aliquid. Et impedit accusamus ducimus!</p>
+                    <div class="card-text">
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae saepe dolores?
+                            Fugiat dicta numquam corrupti doloremque amet, ad ipsam, praesentium exercitationem
+                            repudiandae architecto quo aliquid. Et impedit accusamus ducimus!</p>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
     <footer>
-        <p>© <span></span> | Created by Cherisse Rogers</p>
+        <p>© <span></span> | Created by Cher Rogers</p>
     </footer>

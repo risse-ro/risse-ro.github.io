@@ -6,7 +6,7 @@
     --header-text: #fffcea;
     --text: #6c2c15;
     --link: #ef6d3e;
-    --accent: #ffb97b;
+    --accent: #fdb270;
     --header: #ff5a70;
 }
 
@@ -21,10 +21,15 @@ body {
     color: var(--text);
 }
 
-h2,
+h3,
 nav {
     font-family: "Archivo", sans-serif;
+    font-size: 1.25rem;
     color: var(--header-text);
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 p {
@@ -41,6 +46,7 @@ p {
 
 .mobile-flex {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -59,6 +65,10 @@ footer {
     line-height: 5rem;
 }
 
+.site-id img {
+    width: 4rem;
+}
+
 header {
     padding: 0 1rem;
     background-image: linear-gradient(to right, var(--header) , var(--accent));
@@ -70,12 +80,18 @@ header svg {
 }
 
 main h2 {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+main h3 {
     background-color: var(--header);
     position: absolute;
-    padding: 1rem 1rem;
+    padding: 1rem;
     margin: 0 0 0 -1px;
     width: 100%;
-    top: -2rem;
+    top: -3.20rem;
     left: 50%;
     transform: translate(-50%, 0);
     border-radius: 15px 15px 0 0;
@@ -83,28 +99,33 @@ main h2 {
 
 main section {
     position: relative;
-    margin: 4rem 2rem;
+    margin: 2rem;
+}
+
+main .fancy-section {
+    margin-top: 6rem;
 }
 
 main section>div {
     background-color: var(--white);
-    padding: 3.5rem 2rem 2rem 2rem;
-    text-align: center;
+    padding: 2rem;
     border-radius: 15px;
 }
+
 
 section div.notice {
     border: dashed 2px var(--header);
 }
 
 /* About Section */
+
 .about-pic {
     width: 80px;
     height: 80px;
     padding: 0;
     position: absolute;
     right: 0.5rem;
-    top: -2.4rem;
+    top: -3.6rem;
     border: solid 3px var(--header);
     border-radius: 50%;
     overflow: hidden;
@@ -115,16 +136,28 @@ section div.notice {
   object-fit: cover;
 }
 
-
 /* Project Section */
-.project-list {
+.card-section {
     background-color: unset;
+    padding: 0;
 }
 
-.project-list>div {
-    background-color: var(--header);
+.card-section>div {
+    background-image: linear-gradient(var(--link), var(--accent) 60%);
     width: 100%;
-    margin: 1rem auto;
+    margin: 2rem auto;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card-section h4 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card-text {
+    padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 /* Navigation */
@@ -154,6 +187,18 @@ a:active {
     color: var(--accent);
 }
 
+/* Special */
+ul.tags li {
+    color: var(--white);
+    background-color: var(--text);
+    opacity: 50%;
+    justify-content: center;
+    padding: 0.30rem 0.75rem;
+    margin: 0 0.25rem 0.5rem 0.25rem;
+    border-radius: 20px;
+}
+
+
 /* Media Queries */
 @media screen and (min-width: 576px) {
     .flex {
@@ -172,11 +217,14 @@ a:active {
         position: relative;
     }
 
-    .project-list>div {
-        background-color: var(--header);
+    .card-section>div {
         width: 45%;
         margin: 1rem auto;
     }
+
+    .card-section>div:hover {
+    transform: scale(105%);
+}
 }
 
 @media screen and (min-width: 1024px) {
