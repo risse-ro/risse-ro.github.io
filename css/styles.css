@@ -42,26 +42,32 @@ p~p {
     margin-top: 1rem;
 }
 
-.sr-only {
+/* Utility Classes */
+.sr-only,
+.hidden {
     position: absolute;
-    left: -9999px;
-    top: -9999px;
     visibility: hidden;
+}
+
+.collapsed {
+    height: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.expanded {
+    height: 100%;
+    visibility: visible;
 }
 
 .mobile-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Header, Footer and Main */
-/* To be used later for hamburger menu */
-menu {
-    position: absolute;
-    display: hidden;
-}
-
+/* Header and Footer */
 header,
 footer {
     background-color: var(--header);
@@ -72,13 +78,31 @@ footer {
 
 header {
     padding: 0 1rem;
-    background-image: linear-gradient(to right, var(--header) , var(--accent));
+    background-image: linear-gradient(to right, var(--header), var(--accent));
 }
 
 header svg {
-    fill: var(--bg-color);
+    fill: var(--white);
     width: 4rem;
 }
+
+.icons>i {
+    font-size: 2rem;
+    margin: 0 0.5rem;
+}
+
+.menu nav div.flex {
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.menu-container {
+    /* display: none; */
+    width: 100%;
+}
+
+/* Main */
 
 main h2 {
     margin: 2rem 0;
@@ -100,7 +124,7 @@ main h3 {
 
 main section {
     position: relative;
-    margin: 2rem;
+    margin: 2rem 1rem;
 }
 
 main .fancy-section {
@@ -119,7 +143,6 @@ section div.notice {
 }
 
 /* About Section */
-
 .about-pic {
     width: 80px;
     height: 80px;
@@ -133,8 +156,8 @@ section div.notice {
 }
 
 .about-pic img {
-  width: 100%;
-  object-fit: cover;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Cards */
@@ -145,7 +168,7 @@ section div.notice {
 }
 
 .card-section>div {
-    background-image: linear-gradient(var(--header) , var(--gradient));
+    background-image: linear-gradient(var(--header), var(--gradient));
     color: var(--header-text);
     width: 100%;
     margin: 2rem auto;
@@ -206,6 +229,10 @@ span.bold {
     font-weight: bold;
 }
 
+.tags {
+    justify-content: center;
+}
+
 ul.tags li {
     color: var(--white);
     background-color: var(--text);
@@ -216,12 +243,20 @@ ul.tags li {
     border-radius: 20px;
 }
 
-
 /* Media Queries */
 @media screen and (min-width: 576px) {
+    .hamburger-menu {
+        display: none;
+    }
+
     .flex {
         display: flex;
         flex-flow: row wrap;
+    }
+
+    .menu-container {
+        width: unset;
+        flex-wrap: nowrap;
     }
 
     nav {
@@ -230,8 +265,6 @@ ul.tags li {
 
     .menu {
         justify-content: flex-end;
-        display: visible;
-        position: relative;
     }
 
     .card-section>div {
@@ -240,9 +273,9 @@ ul.tags li {
     }
 
     .card-section>div:hover {
-    transform: scale(105%);
-     background-image: linear-gradient(var(--gradient) , var(--gradient));
-}
+        transform: scale(105%);
+        background-image: linear-gradient(var(--gradient), var(--gradient));
+    }
 }
 
 @media screen and (min-width: 1024px) {
