@@ -13,6 +13,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -25,12 +26,7 @@ body {
 h3,
 nav {
     font-family: "Archivo", sans-serif;
-    font-size: 1.25rem;
     color: var(--header-text);
-}
-
-main h2 {
-    font-size: 2rem;
 }
 
 p {
@@ -136,6 +132,7 @@ main .fancy-section {
 main section>div {
     background-color: var(--white);
     padding: 2rem;
+    margin-bottom: 2rem;
     border-radius: 15px;
 }
 
@@ -274,6 +271,7 @@ ul.tags li {
     }
 
     nav {
+        font-size: 1.25rem;
         justify-content: space-between;
     }
 
