@@ -14,8 +14,9 @@ hamburgerMenu.addEventListener("click", () => {
 minWidth576 = window.matchMedia("(min-width: 576px)");
 
 function autoExpandNav() {
-    minWidth576.matches ? menu.classList.add('expanded') : menu.classList.remove('expanded');
+    minWidth576.matches || window.innerWidth > 576 ? menu.classList.add('expanded') : menu.classList.remove('expanded');
 }
 
+autoExpandNav();
 minWidth576.addListener(autoExpandNav);
 setYear();
