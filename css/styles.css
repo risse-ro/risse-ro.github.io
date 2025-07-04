@@ -72,21 +72,25 @@ header,
 footer {
     background-color: var(--header);
     color: var(--header-text);
+    padding: 1rem;
     text-align: center;
-    line-height: 5rem;
 }
 
 header {
-    padding: 0 1rem;
     background-image: linear-gradient(to right, var(--header), var(--accent));
 }
 
 header svg {
     fill: var(--white);
-    width: 4rem;
+    width: 3rem;
 }
 
-.icons>i {
+.menu>li,
+.site-id>h2 {
+    padding: 1rem;
+}
+
+header i {
     font-size: 2rem;
     margin: 0 0.5rem;
 }
@@ -98,7 +102,6 @@ header svg {
 }
 
 .menu-container {
-    /* display: none; */
     width: 100%;
 }
 
@@ -114,7 +117,6 @@ main h3 {
     background-color: var(--header);
     position: absolute;
     padding: 1rem;
-    margin: 0 0 0 -1px;
     width: 100%;
     top: -3.20rem;
     left: 50%;
@@ -196,7 +198,6 @@ header a,
 header a:link,
 header a:visited {
     color: var(--header-text);
-    padding: 0.5rem 1rem;
 }
 
 header a:hover,
@@ -218,7 +219,7 @@ a:active {
     color: var(--accent);
 }
 
-/* Special */
+/* Special/Misc */
 span.emphasis {
     font-size: 1.2rem;
     font-weight: bold;
@@ -244,11 +245,23 @@ ul.tags li {
 }
 
 /* Media Queries */
-@media screen and (min-width: 576px) {
+
+@media screen and (min-width: 596px) {
+    main {
+        padding: 0 6rem;
+    }
+}
+
+@media screen and (min-width: 790px) {
     .hamburger-menu {
         display: none;
     }
 
+    header {
+        padding: auto 3rem;
+    }
+
+    /* Adjusting Flex Settings */
     .flex {
         display: flex;
         flex-flow: row wrap;
@@ -257,6 +270,7 @@ ul.tags li {
     .menu-container {
         width: unset;
         flex-wrap: nowrap;
+        align-items: center;
     }
 
     nav {
@@ -267,6 +281,17 @@ ul.tags li {
         justify-content: flex-end;
     }
 
+    /* Header */
+    header svg {
+        width: 4rem;
+    }
+
+    header i {
+        font-size: 2.5rem;
+        margin: 0 1rem;
+    }
+
+    /* Cards */
     .card-section>div {
         width: 45%;
         margin: 1rem auto;
@@ -280,6 +305,17 @@ ul.tags li {
 
 @media screen and (min-width: 1024px) {
     main {
-        padding: 0 20rem;
+        padding: 0 8rem;
+    }
+
+    main section:nth-of-type(-n + 2) {
+        margin: 0 9rem;
+        margin-top: 6rem;
+    }
+
+    /* Cards */
+    .card-section>div {
+        width: 30%;
+        margin: 1rem auto;
     }
 }
