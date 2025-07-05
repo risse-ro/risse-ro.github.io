@@ -23,6 +23,20 @@ function autoExpandNav() {
     minWidth576.matches || window.innerWidth > 790 ? menu.classList.add('expanded') : menu.classList.remove('expanded');
 }
 
+const accordionTitle = document.querySelectorAll('.accordion-title');
+const accordionBody = document.querySelectorAll('.accordion-body');
+
+/**
+ * Listener will expand text if an accordion header is clicked.
+ */
+accordionTitle.forEach((accordionHeading) => {
+    accordionHeading.addEventListener('click', (event) => {
+        event.stopPropagation();
+        event.target.nextElementSibling.classList.toggle('collapsed');
+        accordionHeading.classList.toggle('expanded');
+    })
+});
+
 autoExpandNav();
 minWidth576.addListener(autoExpandNav);
 setYear();
