@@ -29,10 +29,11 @@ const accordionBody = document.querySelectorAll('.accordion-body');
 /**
  * Listener will expand text if an accordion header is clicked.
  */
-accordionTitle.forEach((accordionHeading) => {
+accordionTitle.forEach((accordionHeading, index) => {
     accordionHeading.addEventListener('click', (event) => {
         event.stopPropagation();
-        event.target.nextElementSibling.classList.toggle('collapsed');
+        let clickTarget = accordionBody[index];
+        clickTarget.classList.toggle('expanded');
         accordionHeading.classList.toggle('expanded');
     })
 });

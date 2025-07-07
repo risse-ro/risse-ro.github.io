@@ -40,6 +40,7 @@ p~p {
 
 i {
     font-size: 1.5rem;
+    transition: all 0.3s ease;
 }
 
 /* Utility Classes */
@@ -134,7 +135,7 @@ main .fancy-section {
 
 main section>div {
     background-color: var(--white);
-    padding: 2rem;
+    padding: 2rem 1.25rem;
     margin-bottom: 2rem;
     border-radius: 15px;
 }
@@ -245,7 +246,7 @@ ul.tags li {
     background-color: var(--accent);
     color: var(--white);
     padding: 0.5rem 1rem;
-    margin: 1rem 4rem;
+    margin: 1rem 0;
     font-size: 1.25rem;
     justify-content: space-between;
     align-items: center;
@@ -262,10 +263,15 @@ ul.tags li {
 }
 
 /* Media Queries */
-
 @media screen and (min-width: 596px) {
+
+    /*Padding Adjustments*/
     main {
         padding: 0 6rem;
+    }
+
+    main section>div {
+        padding: 2rem;
     }
 }
 
@@ -323,9 +329,17 @@ ul.tags li {
         transform: scale(105%);
         background-image: linear-gradient(var(--gradient), var(--gradient));
     }
+
+    /* Misc */
+    .accordion-title {
+        width: 85%;
+        margin: 1rem auto;
+    }
 }
 
 @media screen and (min-width: 1024px) {
+
+    /* Padding Adjustments */
     main {
         padding: 0 8rem;
     }
