@@ -12,7 +12,7 @@ Welcome to my personal portfolio website! As I'm a year into my programming jour
  - Improve site accessibility, add backup font in case Google Fonts don't load, etc
 
  BONUS:
- - Add Javascript for a more responsive site
+ - ~~Add Javascript for a more responsive site~~
  - ~~Change nav bar links to a clickable hamburger menu when in mobile view~~
  - Add transition animation when hamburger menu is clicked
  - Add button at footer to return to top of the site
