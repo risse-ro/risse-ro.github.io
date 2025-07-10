@@ -39,8 +39,9 @@ p~p {
 }
 
 i {
-    font-size: 1.5rem;
+    vertical-align: middle;
     transition: all 0.3s ease;
+    margin: 0 0.1rem;
 }
 
 /* Utility Classes */
@@ -166,7 +167,7 @@ section div.notice {
 /* Cards */
 .card-section {
     background-color: unset;
-    padding: 0;
+    padding: 0 2rem;
     text-align: center;
 }
 
@@ -218,6 +219,10 @@ a:active {
 }
 
 /* Special/Misc */
+.center-text {
+    text-align: center;
+}
+
 span.emphasis {
     font-size: 1.2rem;
     font-weight: bold;
@@ -242,12 +247,16 @@ ul.tags li {
     border-radius: 20px;
 }
 
+.accordion-title,
+.accordion-body {
+    margin: 1rem auto;
+}
+
 .accordion-title {
     background-color: var(--accent);
     color: var(--white);
-    max-width: 80ch;
+    max-width: 60ch;
     padding: 0.5rem 1rem;
-    margin: 1rem 0;
     font-size: 1.25rem;
     justify-content: space-between;
     align-items: center;
@@ -263,12 +272,37 @@ ul.tags li {
     transform: rotate(180deg);
 }
 
+.accordion-body {
+    max-width: 90%;
+}
+
 /* Resume Page */
 #resume {
     background-color: var(--white);
     border-radius: 20px;
-    margin: 0;
+    margin: 2rem 0;
     padding: 0;
+}
+
+#resume h2 {
+    margin: 1rem;
+
+}
+
+.resume-page .flex {
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#resume p {
+    max-width: none;
+    margin: 0.5rem 1rem;
+}
+
+.sidebar {
+    margin: 0;
+    color: var(--white);
+    background-color: var(--header);
 }
 
 /* Media Queries */
@@ -343,10 +377,8 @@ ul.tags li {
         background-image: linear-gradient(var(--gradient), var(--gradient));
     }
 
-    /* Misc */
-    .accordion-title {
-        width: 85%;
-        margin: 1rem auto;
+    .sidebar {
+        width: 30%;
     }
 }
 
@@ -357,7 +389,7 @@ ul.tags li {
         padding: 0 8rem;
     }
 
-    main section:nth-of-type(-n + 2) {
+    .homepage section:nth-of-type(-n + 2) {
         margin: 0 9rem;
         margin-top: 6rem;
     }
