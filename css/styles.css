@@ -379,6 +379,10 @@ ul.tags li:hover {
     margin: 0.5rem 0;
 }
 
+.sidebar i {
+    vertical-align: unset;
+}
+
 /* Media Queries */
 @media screen and (min-width: 596px) {
 
@@ -406,7 +410,7 @@ ul.tags li:hover {
     }
 
     /* Adjusting Flex Settings */
-    .flex {
+    .flex:not(#resume) {
         display: flex;
         flex-flow: row wrap;
     }
@@ -450,8 +454,35 @@ ul.tags li:hover {
         transform: scale(105%);
         background-image: linear-gradient(var(--gradient), var(--gradient));
     }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* Padding Adjustments */
+    main {
+        padding: 0 8rem;
+    }
+
+    .homepage section:nth-of-type(-n + 2) {
+        margin: 0 9rem;
+        margin-top: 6rem;
+    }
+
+    /* Cards */
+    .card-section {
+        justify-content: center;
+    }
+
+    .card-section>div {
+        max-width: 30%;
+        margin: 1rem;
+    }
 
     /* Resume Page */
+    #resume {
+        display: flex;
+    }
+
     .main-content {
         max-width: 70%;
     }
@@ -489,27 +520,8 @@ ul.tags li:hover {
         padding-top: 10.20rem;
         border-radius: 0 20px 20px 0;
     }
-}
 
-@media screen and (min-width: 1024px) {
-
-    /* Padding Adjustments */
-    main {
-        padding: 0 8rem;
-    }
-
-    .homepage section:nth-of-type(-n + 2) {
-        margin: 0 9rem;
-        margin-top: 6rem;
-    }
-
-    /* Cards */
-    .card-section {
-        justify-content: center;
-    }
-
-    .card-section>div {
-        max-width: 30%;
-        margin: 1rem;
+    #resume .sidebar p {
+        margin-left: 1.5rem;
     }
 }
