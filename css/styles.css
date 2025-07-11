@@ -69,6 +69,10 @@ i {
     align-items: center;
 }
 
+.align-right {
+    text-align: right;
+}
+
 /* Header and Footer */
 header,
 footer {
@@ -166,7 +170,7 @@ section div.notice {
 /* Cards */
 .card-section {
     background-color: unset;
-    padding: 0 1rem;
+    padding: 0;
     text-align: center;
 }
 
@@ -268,8 +272,9 @@ ul.tags li:hover {
     cursor: pointer;
 }
 
-.accordion-title:hover {
-    opacity: 90%;
+.accordion-title:hover,
+.muted {
+    opacity: 80%;
 }
 
 .accordion-title.expanded i {
@@ -288,27 +293,48 @@ ul.tags li:hover {
     padding: 0;
 }
 
+#resume section {
+    margin: 0;
+}
+
+.main-content,
+.sidebar {
+    padding: 2rem;
+}
+
 .main-content div {
     padding: 0;
     margin: 0.5rem 0;
 }
 
-#resume p {
+.resume-heading .flex {
+    gap: 1rem;
+}
+
+#resume p:not(.resume-heading) {
     max-width: none;
-    margin: 0.5rem 1rem;
+    margin: 0;
 }
 
 .resume-page h2 {
-    margin: 1rem;
+    margin: 0;
 }
 
 .resume-page h4 {
     border-bottom: 2px solid var(--text);
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin: 1rem 0;
 }
 
-.resume-page img {
-    width: 2.5rem;
+.resume-page h5:not(.sidebar h5) {
+    color: var(--link);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.resume-page ul {
+    margin-top: 1rem;
+    list-style: inside;
 }
 
 .resume-page .main-content {
@@ -320,6 +346,24 @@ ul.tags li:hover {
     flex-wrap: nowrap;
 }
 
+.resume-page .job-item:nth-of-type(-n + 2) {
+    border-bottom: 2px var(--accent) solid;
+    border-radius: 0;
+    padding-bottom: 2rem;
+}
+
+.education div {
+    margin: 0;
+}
+
+.education .logo {
+    width: 4rem;
+}
+
+.education .education-item {
+    margin: 1.5rem 0;
+}
+
 .sidebar {
     margin: 0;
     color: var(--white);
@@ -328,6 +372,11 @@ ul.tags li:hover {
 
 .sidebar h4 {
     border-bottom: 2px solid var(--white);
+}
+
+.sidebar h5 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
 }
 
 /* Media Queries */
@@ -402,6 +451,7 @@ ul.tags li:hover {
         background-image: linear-gradient(var(--gradient), var(--gradient));
     }
 
+    /* Resume Page */
     .main-content {
         max-width: 70%;
     }
@@ -410,12 +460,33 @@ ul.tags li:hover {
         justify-content: center;
     }
 
-    .main-content .resume-body .flex {
+    .main-content .resume-body .flex,
+    .education .education-item.flex .flex {
         justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .job-item .flex div:first-of-type {
+        max-width: 80%;
+    }
+
+    .resume-page ul {
+        width: 85%;
+    }
+
+    .education .education-item.flex {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .education .education-item.flex .flex {
+        width: 90%;
+        gap: 2rem;
     }
 
     .sidebar {
         width: 30%;
+        padding-top: 10.20rem;
         border-radius: 0 20px 20px 0;
     }
 }
