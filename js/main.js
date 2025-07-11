@@ -10,6 +10,9 @@ function setYear() {
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const menu = document.querySelector('.menu-container');
 
+/**
+ * Expands hamburger menu if it is clicked while collapsed; collapses it if it is expanded.
+ */
 hamburgerMenu.addEventListener("click", () => {
     menu.classList.toggle('expanded');
 });
