@@ -69,10 +69,6 @@ i {
     align-items: center;
 }
 
-.align-right {
-    text-align: right;
-}
-
 /* Header and Footer */
 header,
 footer {
@@ -114,7 +110,7 @@ header i {
 /* Main */
 main h2 {
     margin: 2rem 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -364,10 +360,17 @@ ul.tags li:hover {
     margin: 1.5rem 0;
 }
 
+.education .education-item,
+.job-item div {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .sidebar {
     margin: 0;
     color: var(--white);
     background-color: var(--header);
+    border-radius: 0 0 20px 20px;
 }
 
 .sidebar h4 {
@@ -387,8 +390,8 @@ ul.tags li:hover {
 @media screen and (min-width: 596px) {
 
     /*Padding Adjustments*/
-    main {
-        padding: 0 6rem;
+    main section {
+        margin: 2rem 3rem;
     }
 
     main section>div {
@@ -397,12 +400,24 @@ ul.tags li:hover {
 }
 
 @media screen and (min-width: 790px) {
+    .align-right {
+        text-align: right;
+    }
+
+    .education .align-right {
+        text-align: left;
+    }
+
     .hamburger-menu {
         display: none;
     }
 
     header {
         padding: auto 3rem;
+    }
+
+    main h2 {
+        font-size: 2.5rem;
     }
 
     h3 {
@@ -413,6 +428,16 @@ ul.tags li:hover {
     .flex:not(#resume) {
         display: flex;
         flex-flow: row wrap;
+    }
+
+    #resume {
+        margin: 2rem 6rem;
+    }
+
+    #resume .education-item .flex {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 89%;
     }
 
     .menu-container {
@@ -454,17 +479,24 @@ ul.tags li:hover {
         transform: scale(105%);
         background-image: linear-gradient(var(--gradient), var(--gradient));
     }
+
+    .main-content .resume-heading .flex {
+        justify-content: center;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-
-    /* Padding Adjustments */
-    main {
-        padding: 0 8rem;
+    main section {
+        margin: 2rem 6rem;
     }
 
+    #resume .education-item .flex {
+        flex-flow: column wrap;
+    }
+
+    /* Padding Adjustments */
     .homepage section:nth-of-type(-n + 2) {
-        margin: 0 9rem;
+        margin: 0 16rem;
         margin-top: 6rem;
     }
 
@@ -481,14 +513,12 @@ ul.tags li:hover {
     /* Resume Page */
     #resume {
         display: flex;
+        max-width: 80vw;
+        margin: 2rem auto;
     }
 
     .main-content {
         max-width: 70%;
-    }
-
-    .main-content .flex {
-        justify-content: center;
     }
 
     .main-content .resume-body .flex,
@@ -511,8 +541,7 @@ ul.tags li:hover {
     }
 
     .education .education-item.flex .flex {
-        width: 90%;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .sidebar {
@@ -524,4 +553,15 @@ ul.tags li:hover {
     #resume .sidebar p {
         margin-left: 1.5rem;
     }
+}
+
+@media screen and (min-width: 1440px) {
+    #resume .education-item .flex {
+        flex-flow: row wrap;
+    }
+
+    .education .align-right {
+        text-align: right;
+    }
+
 }
