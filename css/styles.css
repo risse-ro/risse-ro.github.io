@@ -2,24 +2,24 @@
 :root,
 :root.light {
     --bg-color: #ffe5d0;
-    --white: #fffefb;
+    --section: #fffefb;
     --header-text: #fffcea;
     --text: #6c2c15;
     --link: #ef6d3e;
-    --accent: #fdb270;
-    --gradient: #ff796f;
-    --header: #ff5a70;
+    --accent: #ffab61;
+    --gradient: #fe7167;
+    --header: #f14a60;
 }
 
 :root.dark {
-    --bg-color: #2a2a39;
-    --white: #29284c;
-    --header-text: #fffcea;
-    --text: #e1f0ff;
-    --link: #3ed4ef;
-    --accent: #2b52c8;
-    --gradient: #0b328d;
-    --header: #0f0941;
+    --bg-color: #202023;
+    --section: #2f2b3b;
+    --header-text: #eaf9ff;
+    --text: #c6dcea;
+    --link: #ef91e1;
+    --accent: #4d3f94;
+    --gradient: #5b3694;
+    --header: #5a2a84;
 }
 
 html {
@@ -36,7 +36,6 @@ body {
 
 h3,
 nav {
-    font-family: "Archivo", sans-serif;
     color: var(--header-text);
 }
 
@@ -93,11 +92,6 @@ header {
     background-image: linear-gradient(to right, var(--header), var(--accent));
 }
 
-header svg {
-    fill: var(--white);
-    width: 3rem;
-}
-
 .menu>li,
 .site-id>h2 {
     padding: 1rem 0.75rem;
@@ -119,6 +113,10 @@ header i {
 }
 
 /* Main */
+main {
+    position: relative;
+}
+
 main h2 {
     margin: 2rem 0;
     font-size: 2rem;
@@ -146,7 +144,7 @@ main .fancy-section {
 }
 
 main section>div {
-    background-color: var(--white);
+    background-color: var(--section);
     padding: 2rem 1.25rem;
     margin-bottom: 2rem;
     border-radius: 15px;
@@ -212,9 +210,9 @@ header a:visited {
     color: var(--header-text);
 }
 
-header a:hover,
-header a:active {
-    color: var(--bg-color);
+header .menu-container :hover,
+header .menu-container a:active {
+    color: var(--link);
 }
 
 a,
@@ -248,7 +246,7 @@ span.bold {
 }
 
 ul.tags li {
-    color: var(--white);
+    color: var(--section);
     background-color: var(--text);
     opacity: 50%;
     justify-content: center;
@@ -269,7 +267,7 @@ ul.tags li:hover {
 
 .accordion-title {
     background-color: var(--accent);
-    color: var(--white);
+    color: var(--header-text);
     max-width: 60ch;
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
@@ -294,7 +292,7 @@ ul.tags li:hover {
 
 /* Resume Page */
 #resume {
-    background-color: var(--white);
+    background-color: var(--section);
     border-radius: 20px;
     margin: 2rem 0.5rem;
     padding: 0;
@@ -378,13 +376,13 @@ ul.tags li:hover {
 
 .sidebar {
     margin: 0;
-    color: var(--white);
+    color: var(--header-text);
     background-color: var(--header);
     border-radius: 0 0 20px 20px;
 }
 
 .sidebar h4 {
-    border-bottom: 2px solid var(--white);
+    border-bottom: 2px solid var(--header-text);
 }
 
 .sidebar h5 {
@@ -466,10 +464,6 @@ ul.tags li:hover {
     }
 
     /* Header */
-    header svg {
-        width: 4rem;
-    }
-
     header i {
         font-size: 2.5rem;
         margin: 0 0.70rem;
@@ -492,6 +486,29 @@ ul.tags li:hover {
 
     .main-content .resume-heading .flex {
         justify-content: center;
+    }
+
+    .lightswitch {
+        background-color: var(--section);
+        position: sticky;
+        text-align: center;
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+        left: 1rem;
+        bottom: 1rem;
+        opacity: 70%;
+        transition: all 0.3s;
+    }
+
+    .lightswitch>i {
+        display: block;
+        font-size: 2.5rem;
+    }
+
+    .lightswitch:hover {
+        opacity: 100%;
+        transform: scale(105%);
     }
 }
 

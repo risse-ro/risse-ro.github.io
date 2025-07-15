@@ -41,6 +41,14 @@ accordionTitle.forEach((accordionHeading, index) => {
     })
 });
 
+// const lightSwitch = document.querySelector('.lightswitch');
+
+// lightSwitch.addEventListener('click', () => {
+//     console.log('clicked');
+//     const root = document.querySelector(':root');
+//     root.classList.toggle('.dark');
+// })
+
 autoExpandNav();
 minWidth576.addListener(autoExpandNav);
 setYear();
