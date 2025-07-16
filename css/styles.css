@@ -396,7 +396,7 @@ ul.tags li:hover {
 
 .lightswitch-container:not(.lightswitch.mobile) {
     visibility: hidden;
-    display: none;
+    position: absolute;
 }
 
 /* Media Queries */
@@ -495,6 +495,11 @@ ul.tags li:hover {
 
     .lightswitch.mobile {
         visibility: hidden;
+    }
+
+    .lightswitch-container:not(.lightswitch.mobile) {
+        visibility: visible;
+        position: fixed;
     }
 
     .lightswitch {
