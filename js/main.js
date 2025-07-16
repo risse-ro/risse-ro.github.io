@@ -41,13 +41,27 @@ accordionTitle.forEach((accordionHeading, index) => {
     })
 });
 
-// const lightSwitch = document.querySelector('.lightswitch');
+const lightSwitch = document.querySelectorAll('.lightswitch');
 
-// lightSwitch.addEventListener('click', () => {
-//     console.log('clicked');
-//     const root = document.querySelector(':root');
-//     root.classList.toggle('.dark');
-// })
+/**
+ * Switches between the light and dark theme.
+ */
+function switchTheme(e) {
+    let root = document.documentElement;
+    if (root.getAttribute('data-theme') === 'light') {
+        root.setAttribute('data-theme', 'dark');
+    }
+    else {
+        root.setAttribute('data-theme', 'light');
+    }
+}
+
+lightSwitch.forEach((element) => element.addEventListener('click', switchTheme, false));
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.documentElement.setAttribute('data-theme', 'light');
+}
+)
 
 autoExpandNav();
 minWidth576.addListener(autoExpandNav);

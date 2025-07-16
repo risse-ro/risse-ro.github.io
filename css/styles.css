@@ -1,6 +1,5 @@
 /* Basic Styles */
-:root,
-:root.light {
+:root {
     --bg-color: #ffe5d0;
     --section: #fffefb;
     --header-text: #fffcea;
@@ -11,7 +10,7 @@
     --header: #f14a60;
 }
 
-:root.dark {
+[data-theme="dark"] {
     --bg-color: #202023;
     --section: #2f2b3b;
     --header-text: #eaf9ff;
@@ -488,9 +487,13 @@ ul.tags li:hover {
         justify-content: center;
     }
 
+    .lightswitch.mobile {
+        visibility: hidden;
+    }
+
     .lightswitch {
         background-color: var(--section);
-        position: sticky;
+        position: fixed;
         text-align: center;
         height: 3.5rem;
         width: 3.5rem;
@@ -499,10 +502,6 @@ ul.tags li:hover {
         bottom: 1rem;
         opacity: 70%;
         transition: all 0.3s;
-    }
-
-    .lightswitch>i {
-        display: block;
         font-size: 2.5rem;
     }
 
