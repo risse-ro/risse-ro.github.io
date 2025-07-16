@@ -50,9 +50,17 @@ function switchTheme(e) {
     let root = document.documentElement;
     if (root.getAttribute('data-theme') === 'light') {
         root.setAttribute('data-theme', 'dark');
+        lightSwitch.forEach((element) => {
+            element.classList.remove('bi-moon-stars-fill')
+            element.classList.add('bi-sun-fill')
+        });
     }
     else {
         root.setAttribute('data-theme', 'light');
+        lightSwitch.forEach((element) => {
+            element.classList.remove('bi-sun-fill')
+            element.classList.add('bi-moon-stars-fill')
+        });
     }
 }
 

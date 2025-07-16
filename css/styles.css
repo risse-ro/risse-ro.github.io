@@ -393,6 +393,11 @@ ul.tags li:hover {
     vertical-align: unset;
 }
 
+.lightswitch-container:not(.lightswitch.mobile) {
+    visibility: hidden;
+    display: none;
+}
+
 /* Media Queries */
 @media screen and (min-width: 596px) {
 
