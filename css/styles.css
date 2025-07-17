@@ -290,6 +290,17 @@ ul.tags li:hover {
     max-width: 90%;
 }
 
+.lightswitch-container:not(.lightswitch.mobile) {
+    visibility: hidden;
+    position: absolute;
+}
+
+.lightswitch.mobile {
+    position: absolute;
+    right: 1rem;
+    top: 13rem;
+}
+
 /* Resume Page */
 #resume {
     background-color: var(--section);
@@ -392,11 +403,6 @@ ul.tags li:hover {
 
 .sidebar i {
     vertical-align: unset;
-}
-
-.lightswitch-container:not(.lightswitch.mobile) {
-    visibility: hidden;
-    position: absolute;
 }
 
 /* Media Queries */
