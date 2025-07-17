@@ -68,13 +68,6 @@ function switchTheme(storedTheme) {
 
 lightSwitch.forEach((element) => element.addEventListener('click', switchTheme, false));
 
-// On load, will change the theme according to the user's past preference of theme.
-document.addEventListener("DOMContentLoaded", () => {
-    let currentTheme = localStorage.getItem('theme');
-    switchTheme(currentTheme);
-}
-)
-
 autoExpandNav();
 minWidth576.addListener(autoExpandNav);
 setYear();
