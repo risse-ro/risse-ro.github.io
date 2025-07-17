@@ -46,13 +46,14 @@ const lightSwitch = document.querySelectorAll('.lightswitch');
 /**
  * Switches between the light and dark theme.
  */
-function switchTheme(e) {
+function switchTheme(storedTheme) {
     let root = document.documentElement;
-    if (root.getAttribute('data-theme') === 'light') {
+    if (root.getAttribute('data-theme') === 'light' || storedTheme === 'dark') {
         root.setAttribute('data-theme', 'dark');
         lightSwitch.forEach((element) => {
             element.classList.remove('bi-moon-stars-fill')
             element.classList.add('bi-sun-fill')
+            localStorage.setItem('theme', 'dark')
         });
     }
     else {
@@ -60,14 +61,17 @@ function switchTheme(e) {
         lightSwitch.forEach((element) => {
             element.classList.remove('bi-sun-fill')
             element.classList.add('bi-moon-stars-fill')
+            localStorage.setItem('theme', 'light');
         });
     }
 }
 
 lightSwitch.forEach((element) => element.addEventListener('click', switchTheme, false));
 
+// On load, will change the theme according to the user's past preference of theme.
 document.addEventListener("DOMContentLoaded", () => {
-    document.documentElement.setAttribute('data-theme', 'light');
+    let currentTheme = localStorage.getItem('theme');
+    switchTheme(currentTheme);
 }
 )
 
