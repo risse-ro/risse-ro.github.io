@@ -135,8 +135,8 @@ main h3 {
 
 main section {
     position: relative;
-    margin: 2rem 1rem;
-    max-width: 1280px;
+    margin: 2rem auto;
+    max-width: 90vw;
 }
 
 main .fancy-section {
@@ -410,7 +410,8 @@ ul.tags li:hover {
 
     /*Padding Adjustments*/
     main section {
-        margin: 2rem 3rem;
+        margin: 2rem auto;
+        max-width: 80vw;
     }
 
     main section>div {
@@ -530,7 +531,7 @@ ul.tags li:hover {
 
 @media screen and (min-width: 1024px) {
     main section {
-        margin: 2rem 6rem;
+        margin: 2rem auto;
     }
 
     #resume .education-item .flex {
@@ -539,8 +540,8 @@ ul.tags li:hover {
 
     /* Padding Adjustments */
     .homepage section:nth-of-type(-n + 2) {
-        margin: 0 16rem;
-        margin-top: 6rem;
+        margin: 6rem auto 0 auto;
+        max-width: 70vw;
     }
 
     /* Cards */
