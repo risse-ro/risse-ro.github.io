@@ -268,7 +268,7 @@ ul.tags li:hover {
 .accordion-title {
     background-color: var(--accent);
     color: var(--header-text);
-    max-width: 60ch;
+    max-width: 65ch;
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     justify-content: space-between;
@@ -530,18 +530,18 @@ ul.tags li:hover {
 }
 
 @media screen and (min-width: 1024px) {
-    main section {
-        margin: 2rem auto;
-    }
-
     #resume .education-item .flex {
         flex-flow: column wrap;
     }
 
     /* Padding Adjustments */
+    main section {
+        margin: 2rem auto;
+    }
+
     .homepage section:nth-of-type(-n + 2) {
         margin: 6rem auto 0 auto;
-        max-width: 70vw;
+        max-width: 60vw;
     }
 
     /* Cards */

@@ -20,7 +20,16 @@
     <link rel="stylesheet" href="css/styles.css">
     <script>
         const theme = localStorage.getItem('theme') || 'light';
+        console.log(theme);
         document.documentElement.dataset.theme = theme;
+        if (theme == 'dark');
+        {
+            let lightswitches = document.querySelectorAll('.lightswitch');
+            lightswitches.forEach(element => {
+                element.classList.remove('bi-moon-stars-fill')
+                element.classList.add('bi-sun-fill')
+            });
+        }
     </script>
     <script src="js/main.js" defer></script>
 </head>
@@ -67,8 +76,8 @@
                     I'm currently a Software Development student at NAIT.
                     I officially began my coding journey in 2024, but I'm learning new things every day and hoping to
                     completed
-                    the program in Spring 2026! I really
-                    enjoy working on the front-end, though I'm also capable of working on the back-end as well.
+                    the program in Spring 2026! Though I particularly enjoy front end, I've been taught skills that
+                    enable me to be a fullstack developer and work on the back end as well.
                 </p>
                 <p><i class="bi bi-geo-alt"></i> I'm based in <span class="bold">Edmonton</span> (Canada) but
                     would be willing to

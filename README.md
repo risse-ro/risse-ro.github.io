@@ -19,3 +19,4 @@ Welcome to my personal portfolio website! As I'm a year into my programming jour
  - ~~Add a "Dark" mode that is triggered with the click of a moon symbol (or something like that)~~
  - Add "Github" dev log/commit history, if possible
  - Fix and simplify JS for dark mode
+ - Make carousel for projects
