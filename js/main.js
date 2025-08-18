@@ -17,13 +17,13 @@ hamburgerMenu.addEventListener("click", () => {
     menu.classList.toggle('expanded');
 });
 
-minWidth576 = window.matchMedia("(min-width: 790px)");
+minWidth790 = window.matchMedia("(min-width: 790px)");
 
 /**
  * Automatically expands nav links if window is expanded >790px.
  */
 function autoExpandNav() {
-    minWidth576.matches || window.innerWidth > 790 ? menu.classList.add('expanded') : menu.classList.remove('expanded');
+    minWidth790.matches || window.innerWidth > 790 ? menu.classList.add('expanded') : menu.classList.remove('expanded');
 }
 
 const accordionTitle = document.querySelectorAll('.accordion-title');
@@ -92,7 +92,8 @@ function setThemedIcons() {
 
 lightSwitch.forEach((element) => element.addEventListener('click', switchTheme, false));
 
-setThemedIcons();
 autoExpandNav();
-minWidth576.addListener(autoExpandNav);
+setThemedIcons();
 setYear();
+
+minWidth790.addListener(autoExpandNav);
