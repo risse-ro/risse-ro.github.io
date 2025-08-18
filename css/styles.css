@@ -68,7 +68,7 @@ i {
 .expanded {
     height: 100%;
     visibility: visible;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .mobile-flex {
@@ -170,6 +170,7 @@ section div.notice {
 .about-pic img {
     width: 100%;
     object-fit: cover;
+    pointer-events: none;
 }
 
 /* Cards */
@@ -539,10 +540,26 @@ ul.tags li:hover {
         margin: 2rem auto;
     }
 
-    .homepage section:nth-of-type(-n + 2) {
-        margin: 6rem auto 0 auto;
-        max-width: 60vw;
+    /* .about-summary {
+    width: 70%;
     }
+
+    .about-image {
+    margin: auto;
+    width: 30%;
+    } */
+
+    .homepage section:nth-of-type(-n + 1) {
+        margin: 6rem auto 0 auto;
+        max-width: 50vw;
+    }
+
+    .about-pic {
+    width: 120px;
+    height: 120px;
+    top: -4.6rem;
+    border: solid 5px var(--header);
+}
 
     /* Cards */
     .card-section {

@@ -20,16 +20,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <script>
         const theme = localStorage.getItem('theme') || 'light';
-        console.log(theme);
+        const lightswitches = document.querySelectorAll('.lightswitch');
         document.documentElement.dataset.theme = theme;
-        if (theme == 'dark');
-        {
-            let lightswitches = document.querySelectorAll('.lightswitch');
-            lightswitches.forEach(element => {
-                element.classList.remove('bi-moon-stars-fill')
-                element.classList.add('bi-sun-fill')
-            });
-        }
     </script>
     <script src="js/main.js" defer></script>
 </head>
@@ -58,37 +50,34 @@
         </nav>
     </header>
     <main class="homepage">
-        <section class="fancy-section">
-            <h3>Notice 🔧</h3>
-            <div class="notice">
-                <p>This website is a work in progress! Don't mind the mess around here! 👷‍♀️ <a href="#">Test Link</a>
-                </p>
-            </div>
-        </section>
         <section id="about" class="fancy-section">
             <h3>Hi, I'm Cherisse!</h3>
             <div class="about-pic">
-                <img src="img/shiba-squish.gif" alt="#">
+                <img class="selfie" src="img/selfie-night.jpg" alt="#">
             </div>
             <div class="about-text">
-                <p><span class="emphasis">Welcome to my portfolio! <i class="bi bi-briefcase-fill"></i></span></p>
-                <p>
-                    I'm currently a Software Development student at NAIT.
-                    I officially began my coding journey in 2024, but I'm learning new things every day and hoping to
-                    completed
-                    the program in Spring 2026! Though I particularly enjoy front end, I've been taught skills that
-                    enable me to be a fullstack developer and work on the back end as well.
-                </p>
-                <p><i class="bi bi-geo-alt"></i> I'm based in <span class="bold">Edmonton</span> (Canada) but
-                    would be willing to
-                    relocate or
-                    work remotely once I finish my diploma!</p>
-                <p><i class="bi bi-suit-heart"></i> My interests include drawing + painting, gaming, writing,
-                    computers
-                    + programming, and I dabble in
-                    video
-                    editing and 3D modeling. I love working with things that let me be creative! I also like
-                    language-learning and psychology.</p>
+                <div class="flex">
+                    <div class="about-summary">
+                        <p><span class="emphasis">Welcome to my portfolio! <i class="bi bi-briefcase-fill"></i></span></p>
+                        <p>
+                            I'm currently a Software Development student at NAIT!
+                            I officially began my coding journey in 2024, but I'm learning new things every day and hoping to
+                            completed
+                            the program in Spring 2026. Though I particularly enjoy front end, I've been taught skills that
+                            enable me to be a fullstack developer and work on the back end as well.
+                        </p>
+                        <p><i class="bi bi-geo-alt"></i> I'm based in <span class="bold">Edmonton</span> (Canada) but
+                            would be willing to
+                            relocate or
+                            work remotely once I finish my diploma!</p>
+                        <p><i class="bi bi-suit-heart"></i> My interests include drawing + painting, gaming, writing,
+                            computers
+                            + programming, and I dabble in
+                            video
+                            editing and 3D modeling. I love working with things that let me be creative!</p>
+                    </div>
+                    <!-- <div class="about-image"><img src="img/dogthink.png" alt="#"></div> -->
+                </div>
                 <div class="accordion-item">
                     <div class="flex mobile-flex accordion-title">
                         <h4>So what's your story? <i class="bi bi-search"></i></h4>
@@ -195,7 +184,7 @@
                 </div>
             </div>
         </section>
-        <div class="lightswitch-container"><i class="bi bi-moon-stars-fill lightswitch"></i></div>
+        <div class="lightswitch-container"><i class="bi lightswitch"></i></div>
     </main>
     <footer>
         <p>© <span></span> | Created by Cherisse Rogers</p>

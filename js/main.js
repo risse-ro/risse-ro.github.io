@@ -42,6 +42,7 @@ accordionTitle.forEach((accordionHeading, index) => {
 });
 
 const lightSwitch = document.querySelectorAll('.lightswitch');
+const selfiePic = document.querySelector('.selfie');
 
 /**
  * Switches between the light and dark theme.
@@ -54,6 +55,7 @@ function switchTheme(storedTheme) {
             element.classList.remove('bi-moon-stars-fill')
             element.classList.add('bi-sun-fill')
             localStorage.setItem('theme', 'dark')
+            selfiePic.src = 'img/selfie-night.jpg';
         });
     }
     else {
@@ -61,13 +63,36 @@ function switchTheme(storedTheme) {
         lightSwitch.forEach((element) => {
             element.classList.remove('bi-sun-fill')
             element.classList.add('bi-moon-stars-fill')
+            selfiePic.src = 'img/selfie-day.jpg';
             localStorage.setItem('theme', 'light');
         });
     }
 }
 
+/**
+ * Sets the desired icons/images depending on which theme is active upon entering the page.
+ */
+function setThemedIcons() {
+    if (theme === 'dark') {
+        lightSwitch.forEach(element => {
+            element.classList.remove('bi-moon-stars-fill');
+            element.classList.add('bi-sun-fill');
+        });
+        selfiePic.src = 'img/selfie-night.jpg';
+    }
+    else {
+        lightSwitch.forEach(element => {
+            element.classList.remove('bi-sun-fill');
+            element.classList.add('bi-moon-stars-fill');
+        });
+        selfiePic.src = 'img/selfie-day.jpg';
+    }
+}
+
+
 lightSwitch.forEach((element) => element.addEventListener('click', switchTheme, false));
 
+setThemedIcons();
 autoExpandNav();
 minWidth576.addListener(autoExpandNav);
 setYear();
