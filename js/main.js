@@ -56,7 +56,7 @@ function switchTheme(storedTheme) {
             element.classList.remove('bi-moon-stars-fill')
             element.classList.add('bi-sun-fill')
             if (pathname != '/resume.html') {
-                selfiePic.src = 'img/selfie-night.jpg';
+                selfiePic.src = 'img/selfie-night.webp';
             }
             localStorage.setItem('theme', 'dark')
         });
@@ -67,7 +67,7 @@ function switchTheme(storedTheme) {
             element.classList.remove('bi-sun-fill')
             element.classList.add('bi-moon-stars-fill')
             if (pathname != '/resume.html') {
-                selfiePic.src = 'img/selfie-day.jpg';
+                selfiePic.src = 'img/selfie-day.webp';
             }
             localStorage.setItem('theme', 'light');
         });
@@ -84,7 +84,7 @@ function setThemedIcons() {
             element.classList.add('bi-sun-fill');
         });
         if (pathname != '/resume.html') {
-            selfiePic.src = 'img/selfie-night.jpg';
+            selfiePic.src = 'img/selfie-night.webp';
         }
     }
     else {
@@ -93,7 +93,7 @@ function setThemedIcons() {
             element.classList.add('bi-moon-stars-fill');
         });
         if (pathname != '/resume.html') {
-            selfiePic.src = 'img/selfie-day.jpg';
+            selfiePic.src = 'img/selfie-day.webp';
         }
     }
 }

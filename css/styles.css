@@ -3,9 +3,10 @@
     --bg-color: #ffe5d0;
     --section: #fffefb;
     --header-text: #fffcea;
+    --header-link: #ffdead;
     --text: #6c2c15;
     --link: #ef6d3e;
-    --accent: #ffab61;
+    --accent: #ffa75b;
     --gradient: #fe7167;
     --header: #f14a60;
 }
@@ -14,6 +15,7 @@
     --bg-color: #202023;
     --section: #2f2b3b;
     --header-text: #eaf9ff;
+        --header-link: #d3bbff;
     --text: #c6dcea;
     --link: #ef91e1;
     --accent: #4d3f94;
@@ -176,6 +178,7 @@ section div.notice {
 .about-image {
     margin: 1rem auto;
     width: 50%;
+    max-width: 400px;
 }
 
 /* Cards */
@@ -212,13 +215,20 @@ section div.notice {
 /* Navigation */
 header a,
 header a:link,
-header a:visited {
+header a:visited,
+footer a,
+footer a:link,
+footer a:visited {
     color: var(--header-text);
 }
 
-header .menu-container :hover,
-header .menu-container a:active {
-    color: var(--link);
+footer a:hover {
+    text-decoration: underline;
+}
+
+header a:hover:not(h2 a)
+{
+     color: var(--header-link);
 }
 
 a,
@@ -274,7 +284,7 @@ ul.tags li:hover {
 .accordion-title {
     background-color: var(--accent);
     color: var(--header-text);
-    max-width: 75ch;
+    max-width: 80ch;
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     justify-content: space-between;
@@ -551,7 +561,7 @@ ul.tags li:hover {
 
     .homepage section:nth-of-type(-n + 1) {
         margin: 6rem auto 0 auto;
-        max-width: 50vw;
+        max-width: 60vw;
     }
 
     .about-pic {
@@ -607,7 +617,7 @@ ul.tags li:hover {
 
     .sidebar {
         width: 30%;
-        padding-top: 10.20rem;
+        padding-top: 9.79rem;
         border-radius: 0 20px 20px 0;
     }
 
@@ -625,17 +635,28 @@ ul.tags li:hover {
         text-align: right;
     }
 
-    .about-text .flex {
-        margin: 1.5rem 3.5rem;
+    .about-text > div.flex {
+    margin: auto 5rem;
     }
 
     .about-summary {
-    width: 58%;
+    width: 60%;
+    margin: auto;
     }
 
     .about-image {
+    text-align: center;
     margin: auto;
-    width: 38%;
+    width: 40%;
     }
+}
 
+@media screen and (min-width: 1800px) {
+     .homepage section {
+        max-width: 1400px;
+     }
+        .homepage section:nth-of-type(-n + 1) {
+        margin: 8rem auto 0 auto;
+        max-width: 1050px;
+    }
 }
