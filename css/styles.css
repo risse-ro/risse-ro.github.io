@@ -155,6 +155,10 @@ section div.notice {
 }
 
 /* About Section */
+.about-text > .flex {
+    justify-content: center;
+}
+
 .about-pic {
     width: 80px;
     height: 80px;
