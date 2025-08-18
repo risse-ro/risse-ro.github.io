@@ -4,9 +4,9 @@
     --section: #fffefb;
     --header-text: #fffcea;
     --header-link: #ffdead;
-    --text: #6c2c15;
-    --link: #f86b38;
-    --accent: #fa963e;
+    --text: #64240d;
+    --link: #ee5119;
+    --accent: #f78420;
     --gradient: #f86257;
     --header: #f5425a;
 }
@@ -18,7 +18,7 @@
         --header-link: #d3bbff;
     --text: #c6dcea;
     --link: #ef91e1;
-    --accent: #4d3f94;
+    --accent: #5140a5;
     --gradient: #5b3694;
     --header: #5a2a84;
 }
@@ -93,6 +93,10 @@ header {
     background-image: linear-gradient(to right, var(--header), var(--accent));
 }
 
+footer {
+    font-size: 1.20rem;
+}
+
 .menu>li,
 .site-id>h2 {
     padding: 1rem 0.75rem;
@@ -124,7 +128,7 @@ main h2 {
     text-align: center;
 }
 
-main h3 {
+main .fancy-section h3 {
     background-color: var(--header);
     position: absolute;
     padding: 1rem;
@@ -198,7 +202,7 @@ section div.notice {
     transition: 0.5s;
 }
 
-.card-section h4 {
+.card-section h3 {
     margin: 0.5rem 0;
     font-size: 2rem;
     text-align: center;
@@ -286,7 +290,7 @@ ul.tags li:hover {
     color: var(--header-text);
     max-width: 80ch;
     padding: 0.5rem 1rem;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
