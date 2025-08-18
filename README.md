@@ -7,7 +7,7 @@ Welcome to my personal portfolio website! As I'm a year into my programming jour
  - ~~Once mobile view is complete, properly media query for other screen sizes~~
  - ~~Replace emojis with SVGs~~
  - ~~Fill out with pertinent information (about, projects, etc)~~
- - Make custom art for the about / other sections
+ - ~~Make custom art for the about / other sections~~
  - ~~More 'pizzazz'! Like panels that grow slightly when hovered over~~
  - Improve site accessibility, add backup font in case Google Fonts don't load, etc
  - Convert imgs to better filetypes

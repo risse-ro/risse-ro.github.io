@@ -5,10 +5,10 @@
     --header-text: #fffcea;
     --header-link: #ffdead;
     --text: #6c2c15;
-    --link: #ef6d3e;
-    --accent: #ffa75b;
-    --gradient: #fe7167;
-    --header: #f14a60;
+    --link: #f86b38;
+    --accent: #fa963e;
+    --gradient: #f86257;
+    --header: #f5425a;
 }
 
 [data-theme="dark"] {
@@ -295,7 +295,7 @@ ul.tags li:hover {
 
 .accordion-title:hover,
 .muted {
-    opacity: 80%;
+    opacity: 85%;
 }
 
 .accordion-title.expanded i {
