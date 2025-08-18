@@ -636,17 +636,15 @@ ul.tags li:hover {
     }
 
     .about-text > div.flex {
-    margin: auto 5rem;
+    margin: auto 4.5rem;
     }
 
     .about-summary {
     width: 60%;
-    margin: auto;
     }
 
     .about-image {
-    text-align: center;
-    margin: auto;
+    margin: unset;
     width: 40%;
     }
 }
