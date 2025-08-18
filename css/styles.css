@@ -155,10 +155,6 @@ section div.notice {
 }
 
 /* About Section */
-.about-text > .flex {
-    justify-content: center;
-}
-
 .about-pic {
     width: 80px;
     height: 80px;
@@ -175,6 +171,11 @@ section div.notice {
     width: 100%;
     object-fit: cover;
     pointer-events: none;
+}
+
+.about-image {
+    margin: 1rem auto;
+    width: 50%;
 }
 
 /* Cards */
@@ -273,7 +274,7 @@ ul.tags li:hover {
 .accordion-title {
     background-color: var(--accent);
     color: var(--header-text);
-    max-width: 70ch;
+    max-width: 75ch;
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     justify-content: space-between;
@@ -548,15 +549,6 @@ ul.tags li:hover {
         margin: 2rem auto;
     }
 
-    /* .about-summary {
-    width: 70%;
-    }
-
-    .about-image {
-    margin: auto;
-    width: 30%;
-    } */
-
     .homepage section:nth-of-type(-n + 1) {
         margin: 6rem auto 0 auto;
         max-width: 50vw;
@@ -631,6 +623,19 @@ ul.tags li:hover {
 
     .education .align-right {
         text-align: right;
+    }
+
+    .about-text .flex {
+        margin: 1.5rem 3.5rem;
+    }
+
+    .about-summary {
+    width: 58%;
+    }
+
+    .about-image {
+    margin: auto;
+    width: 38%;
     }
 
 }

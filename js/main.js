@@ -55,9 +55,8 @@ function switchTheme(storedTheme) {
         lightSwitch.forEach((element) => {
             element.classList.remove('bi-moon-stars-fill')
             element.classList.add('bi-sun-fill')
-            if (pathname == '/')
-            {
-            selfiePic.src = 'img/selfie-night.jpg';
+            if (pathname != '/resume.html') {
+                selfiePic.src = 'img/selfie-night.jpg';
             }
             localStorage.setItem('theme', 'dark')
         });
@@ -67,9 +66,8 @@ function switchTheme(storedTheme) {
         lightSwitch.forEach((element) => {
             element.classList.remove('bi-sun-fill')
             element.classList.add('bi-moon-stars-fill')
-            if (pathname == '/')
-            {
-            selfiePic.src = 'img/selfie-day.jpg';
+            if (pathname != '/resume.html') {
+                selfiePic.src = 'img/selfie-day.jpg';
             }
             localStorage.setItem('theme', 'light');
         });
@@ -85,20 +83,18 @@ function setThemedIcons() {
             element.classList.remove('bi-moon-stars-fill');
             element.classList.add('bi-sun-fill');
         });
-                    if (pathname == '/')
-            {
-        selfiePic.src = 'img/selfie-night.jpg';
-            }
+        if (pathname != '/resume.html') {
+            selfiePic.src = 'img/selfie-night.jpg';
+        }
     }
     else {
         lightSwitch.forEach(element => {
             element.classList.remove('bi-sun-fill');
             element.classList.add('bi-moon-stars-fill');
         });
-                    if (pathname == '/')
-            {
-        selfiePic.src = 'img/selfie-day.jpg';
-            }
+        if (pathname != '/resume.html') {
+            selfiePic.src = 'img/selfie-day.jpg';
+        }
     }
 }
 
