@@ -94,7 +94,7 @@ header {
 }
 
 footer {
-    font-size: 1.20rem;
+    font-weight: bold;
 }
 
 .menu>li,
@@ -180,9 +180,8 @@ section div.notice {
 }
 
 .about-image {
-    margin: 1rem auto;
-    width: 50%;
-    max-width: 400px;
+    height: 0;
+    visibility: hidden;
 }
 
 /* Cards */
@@ -641,15 +640,18 @@ ul.tags li:hover {
 
     .about-text > div.flex {
     margin: auto 4.5rem;
-    }
-
-    .about-summary {
-    width: 60%;
+    align-items: center;
     }
 
     .about-image {
-    margin: unset;
+    visibility: visible;
+    height: unset;
     width: 40%;
+    max-width: 400px;
+}
+
+    .about-summary {
+    width: 56%;
     }
 }
 
