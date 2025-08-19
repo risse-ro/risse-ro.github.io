@@ -20,7 +20,19 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <script>
-        const theme = localStorage.getItem('theme') || 'light';
+        let theme;
+        const savedUserTheme = localStorage.getItem('theme');
+        // if user theme preference exists, uses it. else, checks for dark mode preference. 
+        // if none found, light theme by default.
+        if (savedUserTheme) {
+            theme = savedUserTheme;
+        }
+        else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            theme = 'dark';
+        }
+        else {
+            theme = 'light';
+        }
         document.documentElement.dataset.theme = theme;
     </script>
     <script src="js/main.js" defer></script>

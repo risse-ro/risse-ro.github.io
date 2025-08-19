@@ -6,7 +6,7 @@
     --header-link: #ffdead;
     --text: #64240d;
     --link: #ee5119;
-    --accent: #f78420;
+    --accent: #fd7e0e;
     --gradient: #f86257;
     --header: #f5425a;
 }
@@ -30,7 +30,7 @@ html {
 
 body {
     font-size: 100%;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
     background-color: var(--bg-color);
     color: var(--text);
 }
@@ -451,10 +451,6 @@ ul.tags li:hover {
         display: none;
     }
 
-    header {
-        padding: auto 3rem;
-    }
-
     main h2 {
         font-size: 2.5rem;
     }
@@ -640,18 +636,19 @@ ul.tags li:hover {
 
     .about-text > div.flex {
     margin: auto 4.5rem;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: space-between;
     }
 
     .about-image {
     visibility: visible;
     height: unset;
-    width: 40%;
-    max-width: 400px;
+    width: 38%;
+    max-width: 315px;
 }
 
     .about-summary {
-    width: 56%;
+    width: 60%;
     }
 }
 

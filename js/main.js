@@ -98,6 +98,12 @@ function setThemedIcons() {
     }
 }
 
+// listens for changes in user color scheme preference
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    const newTheme = event.matches ? 'dark' : 'light';
+    switchTheme(newTheme);
+});
+
 lightSwitch.forEach((element) => element.addEventListener('click', switchTheme, false));
 
 autoExpandNav();
