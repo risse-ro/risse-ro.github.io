@@ -18,8 +18,8 @@
         --header-link: #d3bbff;
     --text: #c6dcea;
     --link: #ef91e1;
-    --accent: #5140a5;
-    --gradient: #5b3694;
+    --accent: #503fa8;
+    --gradient: #5f39a7;
     --header: #5a2a84;
 }
 
@@ -216,6 +216,17 @@ section div.notice {
 }
 
 /* Navigation */
+a,
+a:link,
+a:visited {
+    color: var(--link);
+}
+
+a:hover,
+a:active {
+    color: var(--accent);
+}
+
 header a,
 header a:link,
 header a:visited,
@@ -232,17 +243,6 @@ footer a:hover {
 header a:hover:not(h2 a)
 {
      color: var(--header-link);
-}
-
-a,
-a:link,
-a:visited {
-    color: var(--link);
-}
-
-a:hover,
-a:active {
-    color: var(--accent);
 }
 
 /* Special/Misc */
@@ -426,7 +426,6 @@ ul.tags li:hover {
 
 /* Media Queries */
 @media screen and (min-width: 596px) {
-
     /*Padding Adjustments*/
     main section {
         margin: 2rem auto;
@@ -439,6 +438,7 @@ ul.tags li:hover {
 }
 
 @media screen and (min-width: 790px) {
+    /* Adjusting Flex+Size Settings */
     .align-right {
         text-align: right;
     }
@@ -459,7 +459,6 @@ ul.tags li:hover {
         font-size: 1.5rem;
     }
 
-    /* Adjusting Flex Settings */
     .flex:not(#resume) {
         display: flex;
         flex-flow: row wrap;
@@ -626,6 +625,7 @@ ul.tags li:hover {
 }
 
 @media screen and (min-width: 1440px) {
+    /* Adjusting Flex Settings */
     #resume .education-item .flex {
         flex-flow: row wrap;
     }
