@@ -215,6 +215,10 @@ section div.notice {
     font-size: 1.75rem;
 }
 
+.card-section .card-item ul ul {
+    font-size: 1.2rem;
+}
+
 /* Navigation */
 a,
 a:link,
