@@ -667,4 +667,8 @@ ul.tags li:hover {
         margin: 8rem auto 0 auto;
         max-width: 1050px;
     }
+
+        .about-text>div.flex {
+        margin: auto 4rem;
+        }
 }
