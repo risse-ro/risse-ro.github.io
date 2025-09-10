@@ -15,7 +15,7 @@
     --bg-color: #202023;
     --section: #2f2b3b;
     --header-text: #eaf9ff;
-        --header-link: #d3bbff;
+    --header-link: #d3bbff;
     --text: #c6dcea;
     --link: #ef91e1;
     --accent: #503fa8;
@@ -244,9 +244,8 @@ footer a:hover {
     text-decoration: underline;
 }
 
-header a:hover:not(h2 a)
-{
-     color: var(--header-link);
+header a:hover:not(h2 a) {
+    color: var(--header-link);
 }
 
 /* Special/Misc */
@@ -430,6 +429,7 @@ ul.tags li:hover {
 
 /* Media Queries */
 @media screen and (min-width: 596px) {
+
     /*Padding Adjustments*/
     main section {
         margin: 2rem auto;
@@ -442,6 +442,7 @@ ul.tags li:hover {
 }
 
 @media screen and (min-width: 790px) {
+
     /* Adjusting Flex+Size Settings */
     .align-right {
         text-align: right;
@@ -567,11 +568,11 @@ ul.tags li:hover {
     }
 
     .about-pic {
-    width: 120px;
-    height: 120px;
-    top: -4.6rem;
-    border: solid 5px var(--header);
-}
+        width: 120px;
+        height: 120px;
+        top: -4.6rem;
+        border: solid 5px var(--header);
+    }
 
     /* Cards */
     .card-section {
@@ -629,6 +630,7 @@ ul.tags li:hover {
 }
 
 @media screen and (min-width: 1440px) {
+
     /* Adjusting Flex Settings */
     #resume .education-item .flex {
         flex-flow: row wrap;
@@ -638,29 +640,30 @@ ul.tags li:hover {
         text-align: right;
     }
 
-    .about-text > div.flex {
-    margin: auto 4.5rem;
-    align-items: flex-end;
-    justify-content: space-between;
+    .about-text>div.flex {
+        margin: auto 2.5rem;
+        align-items: flex-end;
+        justify-content: space-between;
     }
 
     .about-image {
-    visibility: visible;
-    height: unset;
-    width: 38%;
-    max-width: 315px;
-}
+        visibility: visible;
+        height: unset;
+        width: 38%;
+        max-width: 315px;
+    }
 
     .about-summary {
-    width: 60%;
+        width: 60%;
     }
 }
 
 @media screen and (min-width: 1800px) {
-     .homepage section {
+    .homepage section {
         max-width: 1400px;
-     }
-        .homepage section:nth-of-type(-n + 1) {
+    }
+
+    .homepage section:nth-of-type(-n + 1) {
         margin: 8rem auto 0 auto;
         max-width: 1050px;
     }
