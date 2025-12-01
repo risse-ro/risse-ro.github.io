@@ -151,7 +151,7 @@ main .fancy-section {
 
 main section>div {
     background-color: var(--section);
-    padding: 2rem 1.25rem;
+    padding: 2rem 1.25rem 1rem 1.25rem;
     margin-bottom: 2rem;
     border-radius: 15px;
 }
@@ -208,6 +208,7 @@ section div.notice {
 }
 
 .card-text {
+    text-wrap: balance;
     padding: 0 1rem 1.5rem 1rem;
 }
 
@@ -282,6 +283,10 @@ ul.tags li:hover {
     opacity: 80%;
 }
 
+.accordion-item {
+    margin-top: 2rem;
+}
+
 .accordion-title,
 .accordion-body {
     margin: 1rem auto;
@@ -312,8 +317,7 @@ ul.tags li:hover {
     max-width: 90%;
 }
 
-.accordion-body > p:nth-of-type(2)
-{
+.accordion-body>p:nth-of-type(2) {
     margin-top: 0.25rem;
 }
 
@@ -491,7 +495,7 @@ ul.tags li:hover {
     }
 
     nav {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         justify-content: space-between;
     }
 
@@ -577,6 +581,10 @@ ul.tags li:hover {
         height: 120px;
         top: -4.6rem;
         border: solid 5px var(--header);
+    }
+
+    main .fancy-section h3 {
+        padding-left: 2.5rem;
     }
 
     /* Cards */
@@ -673,7 +681,7 @@ ul.tags li:hover {
         max-width: 1050px;
     }
 
-        .about-text>div.flex {
+    .about-text>div.flex {
         margin: auto 4rem;
-        }
+    }
 }
