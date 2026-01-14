@@ -436,6 +436,32 @@ ul.tags li:hover {
     vertical-align: unset;
 }
 
+    /* Project Pages */
+    .project section {
+        margin: 0 0 1rem 0;
+    }
+
+    .project ul:not(.tags) {
+        list-style: inside;
+    }
+
+    .project h3,
+    .tech-stack h4 {
+        text-align: center;
+        font-size: 1.75rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .project .tags {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.25rem;
+    }
+
+    .project-carousel {
+        margin-top: 1rem;
+    }
+
 /* Media Queries */
 @media screen and (min-width: 596px) {
 
@@ -528,9 +554,19 @@ ul.tags li:hover {
         background-image: linear-gradient(var(--gradient), var(--gradient));
     }
 
+    .card-section a {
+        color: var(--header-text);
+    }
+
+    .card-section a:hover {
+        color: var(--header-link);
+    }
+
     .main-content .resume-heading .flex {
         justify-content: center;
     }
+
+     /* Lightswitch */
 
     .lightswitch.mobile {
         visibility: hidden;
@@ -640,6 +676,30 @@ ul.tags li:hover {
     #resume .sidebar p {
         margin-left: 1.5rem;
     }
+
+    /* Project Pages */
+    .info {
+        width: 50%;
+        padding: 1rem;
+    }
+
+    .project h3 {
+        color: var(--text);
+        margin-bottom: 1rem;
+    }
+
+    .project-carousel {
+        width: 50%;
+    }
+
+     .project-carousel .flex {
+        gap: 0.25rem;
+        justify-content: center;
+     }
+
+    .project-carousel .flex img {
+        width: 49.5%;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -668,6 +728,10 @@ ul.tags li:hover {
 
     .about-summary {
         width: 60%;
+    }
+
+    .project {
+        max-width: 1536px;
     }
 }
 

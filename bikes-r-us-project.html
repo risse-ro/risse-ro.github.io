@@ -50,7 +50,7 @@
             </div>
             <div class="menu-container flex collapsed">
                 <ol class="menu flex">
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
                     <li><a href="resume.html">Resume</a></li>
                 </ol>
                 <div class="icons">
@@ -63,23 +63,61 @@
         </nav>
     </header>
     <main>
-        <section id="about" class="fancy-section">
+        <section class="project">
             <h3>BikesRUs App Project</h3>
-            <div class="about-pic">
-                <img class="selfie" src="img/selfie-night.webp" alt="Photo of the site creator">
-            </div>
-            <div class="about-text">
-                <div class="flex">
-                    <div class="about-summary">
-                        <p><span class="emphasis">Welcome to my portfolio! <i class="bi bi-briefcase-fill"></i></span>
-                        </p>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quisquam tempora quasi voluptates voluptatem, minus, nobis harum sed quibusdam ipsam necessitatibus nemo. Suscipit sapiente similique quibusdam dolor cum earum nobis!</p>
+            <div class="flex">
+                <div class="info">
+                    <section class="tech-stack">
+                        <h4>Tech Stack</h4>
+                        <ul class="tags">
+                            <li>C#</li>
+                            <li>Blazor</li>
+                            <li>MudBlazor</li>
+                            <li>LINQ</li>
+                        </ul>
+                    </section>
+                    <p>
+                        A group project for an App Dev class focused on Online Transaction Processing. I was responsible for <span class="bold">Sales and Returns</span>, which required writing database (LINQ) queries, reverse engineering
+                            the database into the system, and finally, using these queries for data
+                            display on the front end and allowing authorized users to alter data. I
+                        also created the front page and logo for the team.</p>
+                    <p>
+                        I made the following pages for this project:
+                    </p>
+                    <ul>
+                        <li><span class="bold">Customer Search</span> - allows user to search (query database) for a
+                            customer using their last name or phone number</li>
+                        <li><span class="bold">Product Select</span> - allows user to query products filtered by
+                            categories, and add or remove these products to/from the shopping cart</li>
+                        <li><span class="bold">Shopping Cart</span> - allows user to adjust product quantity and view
+                            totals, including tax</li>
+                        <li><span class="bold">Checkout</span> - allows user to choose payment type and apply coupon
+                            codes for discounts. "Place Order" button adds the sale to the database</li>
+                        <li><span class="bold">Returns</span> - allows user to search for a Sale ID number and process a
+                            return, taking previous returns into account</li>
+                    </ul>
+                    <p>This project gave me experience with:</p>
+                    <ul>
+                        <li>Creating Blazor Pages</li>
+                        <li>Creating the BLL, DAL, Entities and View Models</li>
+                        <li>Frontend and Backend Data Validation</li>
+                        <li>Writing LINQ Queries and Data Retrieval</li>
+                        <li>Implementing Authentication/Authorization</li>
+                        <li>Saving Data Using OLTP</li>
+                    </ul>
+                </div>
+                <div class="project-carousel">
+                    <img src="img/bikes-r-us-homepage.webp" alt="Screenshot of BikesRUs App homepage">
+                    <div class="flex">
+                        <img src="img/bikes-r-us-customer-search.webp" alt="Screenshot of BikesRUs customer search page">
+                        <img src="img/bikes-r-us-product-select.webp" alt="Screenshot of BikesRUs App product select page">
+                        <img src="img/bikes-r-us-shopping-cart.webp" alt="Screenshot of BikesRUs App shopping cart page">
+                        <img src="img/bikes-r-us-checkout.webp" alt="Screenshot of BikesRUs App checkout page">
                     </div>
                 </div>
             </div>
         </section>
-          <div class="lightswitch-container"><i class="bi lightswitch"></i></div>
+        <div class="lightswitch-container"><i class="bi lightswitch"></i></div>
     </main>
     <footer>
         <p>© <span></span> | Created by Cherisse Rogers</p>

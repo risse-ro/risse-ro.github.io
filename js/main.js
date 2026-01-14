@@ -55,7 +55,7 @@ function switchTheme(storedTheme) {
         lightSwitch.forEach((element) => {
             element.classList.remove('bi-moon-stars-fill')
             element.classList.add('bi-sun-fill')
-            if (pathname != '/resume.html') {
+            if (pathname == '/') {
                 selfiePic.src = 'img/selfie-night.webp';
             }
             localStorage.setItem('theme', 'dark')
@@ -66,7 +66,7 @@ function switchTheme(storedTheme) {
         lightSwitch.forEach((element) => {
             element.classList.remove('bi-sun-fill')
             element.classList.add('bi-moon-stars-fill')
-            if (pathname != '/resume.html') {
+            if (pathname == '/') {
                 selfiePic.src = 'img/selfie-day.webp';
             }
             localStorage.setItem('theme', 'light');
@@ -83,7 +83,7 @@ function setThemedIcons() {
             element.classList.remove('bi-moon-stars-fill');
             element.classList.add('bi-sun-fill');
         });
-        if (pathname != '/resume.html') {
+        if (pathname == '/') {
             selfiePic.src = 'img/selfie-night.webp';
         }
     }
@@ -92,7 +92,7 @@ function setThemedIcons() {
             element.classList.remove('bi-sun-fill');
             element.classList.add('bi-moon-stars-fill');
         });
-        if (pathname != '/resume.html') {
+        if (pathname == '/') {
             selfiePic.src = 'img/selfie-day.webp';
         }
     }
@@ -105,6 +105,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 });
 
 lightSwitch.forEach((element) => element.addEventListener('click', switchTheme, false));
+
+// img click
+
 
 autoExpandNav();
 setThemedIcons();
