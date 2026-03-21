@@ -336,9 +336,10 @@ ul.tags li:hover {
 }
 
 .lightswitch.mobile {
+    z-index: 5;
     position: absolute;
     right: 1rem;
-    top: 13rem;
+    top: 14rem;
 }
 
 /* Resume Page */
@@ -401,7 +402,7 @@ ul.tags li:hover {
     flex-wrap: nowrap;
 }
 
-.resume-page .job-item:nth-of-type(-n + 2) {
+.resume-page .job-item:nth-of-type(-n + 3) {
     border-bottom: 2px var(--accent) solid;
     border-radius: 0;
     padding-bottom: 2rem;
