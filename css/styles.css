@@ -282,7 +282,7 @@ ul.tags li {
     background-color: var(--text);
     opacity: 50%;
     justify-content: center;
-    padding: 0.30rem 0.75rem;
+    padding: 0.30rem 0.60rem;
     margin: 0 0.25rem 0.5rem 0.25rem;
     border-radius: 20px;
 }
