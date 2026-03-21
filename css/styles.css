@@ -117,6 +117,35 @@ header i {
     width: 100%;
 }
 
+/* Navigation */
+a,
+a:link,
+a:visited {
+    color: var(--link);
+}
+
+a:hover,
+a:active {
+    color: var(--accent);
+}
+
+header a,
+header a:link,
+header a:visited,
+footer a,
+footer a:link,
+footer a:visited {
+    color: var(--header-text);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+header a:hover:not(h2 a) {
+    color: var(--header-link);
+}
+
 /* Main */
 main {
     position: relative;
@@ -227,35 +256,6 @@ section div.notice {
 
 .card-section .card-item ul ul {
     font-size: 1.2rem;
-}
-
-/* Navigation */
-a,
-a:link,
-a:visited {
-    color: var(--link);
-}
-
-a:hover,
-a:active {
-    color: var(--accent);
-}
-
-header a,
-header a:link,
-header a:visited,
-footer a,
-footer a:link,
-footer a:visited {
-    color: var(--header-text);
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-header a:hover:not(h2 a) {
-    color: var(--header-link);
 }
 
 /* Special/Misc */
