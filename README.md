@@ -11,6 +11,7 @@ Welcome to my personal portfolio website! As I'm a year into my programming jour
  - ~~More 'pizzazz'! Like panels that grow slightly when hovered over~~
  - ~~Improve site accessibility, add backup font in case Google Fonts don't load, etc~~
  - ~~Convert imgs to better filetypes~~
+ - Add Year of Project Creation over cards
 
  BONUS:
  - ~~Add Javascript for a more responsive site~~
