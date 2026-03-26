@@ -596,6 +596,7 @@ ul.tags li:hover {
     .lightswitch:hover {
         opacity: 100%;
         transform: scale(105%);
+        cursor: pointer;
     }
 }
 
