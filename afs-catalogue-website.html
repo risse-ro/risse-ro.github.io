@@ -1,175 +1,142 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <title>Home | risse-ro</title>
+    <link rel="icon" type="image/x-icon" href="/img/nerd-dog-favicon.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Cherisse Rogers">
+    <meta name="description" content="A software dev portfolio website for Cherisse Rogers.">
 
-    <link rel="icon" type="image/x-icon" href="{% static 'img/plant-icon.png' %}">
-
-    <!-- Bootstrap5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Font Icon CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom App CSS -->
-    <link rel="stylesheet" href="{% static 'css/app.css' %}" type="text/css">
-
-    <!-- HTMX -->
-    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
-
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script>
-        // heme Initialization
-        const getInitialTheme = () =>
-            localStorage.getItem('theme') ??
-            (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        let theme;
+        const savedUserTheme = localStorage.getItem('theme');
+        // if user theme preference exists, uses it. else, checks for dark mode preference. 
+        // if none found, light theme by default.
+        if (savedUserTheme) {
+            theme = savedUserTheme;
+        }
+        else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            theme = 'dark';
+        }
+        else {
+            theme = 'light';
+        }
+        document.documentElement.dataset.theme = theme;
     </script>
-
-    <title>{% block title %}{% endblock %} | Alberta Food Security</title>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
-    <!--Light/Dark Mode Switch-->
-    <div class="lightswitch-container"><i class="bi lightswitch"></i></div>
-    <!-- Nav Bar -->
-    <nav>
-        <div class="d-flex justify-content-between align-items-center">
-            <!--Site ID/Header-->
-            <div class="flex-item d-flex">
-                <div class="plant-icon">
-                    <img src="{% static 'img/plant-icon.png' %}" alt="Plant Icon">
-                </div>
-                <h1><a href="{% url 'external_site' %}">Alberta Food Security Inc.</a></h1>
+    <header id="header">
+        <h1 class="sr-only">Cherisse's Portfolio</h1>
+        <nav class="mobile-flex flex">
+            <section class="site-id mobile-flex flex">
+                <h2><a href="/"><i class="bi bi-stars"></i>Cherisse Rogers</a></h2>
+            </section>
+            <div class="hamburger-menu mobile-flex">
+                <i class="bi bi-list"></i>
             </div>
-            <!--Page Navigation-->
-            <ul class="flex-item nav-list-1 gap-4 d-none d-xl-flex justify-content-center">
-                <li><a href="{% url 'external_site' %}">Catalogue</a></li>
-                <li><a href="{% url 'checkout:checkout' %}">Checkout</a></li>
-            </ul>
-            {% if request.user.is_authenticated %}
-            <!--Logged In View-->
-            <ul class="logged-in flex-item nav-list-2 gap-3 align-items-center d-none d-xl-flex justify-content-end">
-                <li>Welcome {{ request.user.username }}!</li>
-                <li>
-                    <form id="logout-form" method="post" action="{% url 'logout' %}">
-                        {% csrf_token %}
-                        <button type="submit" class="logout">Log Out</button>
-                    </form>
-                </li>
-            </ul>
-            {% else %}
-            <!--Logged Out View-->
-            <ul class="flex-item nav-list-2 gap-4 align-items-center d-none d-xl-flex justify-content-end">
-                <li><a href="{% url 'register' %}">Sign Up</a></li>
-                <li><a class="login p-2 px-4" href="{% url 'login' %}">Log In</a></li>
-            </ul>
-            {% endif %}
-            <!-- Hamburger Icon -->
-            <div class="gap-4 d-xl-none" data-target="#hamburger-menu">
-                <div class="hamburger-icon"><a data-bs-toggle="collapse" role="button" href="#hamburger-menu"
-                        aria-controls="hamburger-menu" aria-expanded="false"><i class="bi bi-list"></i></a>
+            <div class="menu-container flex collapsed">
+                <ol class="menu flex">
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ol>
+                <div class="icons">
+                    <a href="https://github.com/risse-ro" title="Link to my Github"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/cherisse-r-2174aa219/" title="Link to my LinkedIn"><i
+                            class="bi bi-linkedin"></i></a>
+                </div>
+                <div><i class="bi lightswitch mobile"></i></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="project">
+            <h3>AFS Catalogue Website</h3>
+            <div class="flex">
+                <div class="info">
+                    <div class="flex project-details">
+                        <section class="roles">
+                            <h4>Roles</h4>
+                            <ul class="tags">
+                                <li>Main Designer</li>
+                                <li>Front-end Developer</li>
+                            </ul>
+                        </section>
+                        <section class="tech-stack">
+                            <h4>Tech Stack</h4>
+                            <ul class="tags">
+                                <li>Python</li>
+                                <li>Django</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Figma</li>
+                                <li>Photoshop</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <p>
+                        The Capstone project during my final semester at NAIT. Working on a team with 8 student
+                        developers
+                        and 1 business analyst, we were tasked with
+                        building an online product catalogue website from scratch for Alberta Food Security. It was
+                        created in Django/Python and
+                        we worked from the planning phase all the way into finalization and preparation for deployment
+                        in four months.
+                    </p>
+                    <p>
+                        I was the main designer on the team, as well as one of the front-end developers. Using Figma and
+                        Photoshop, I designed every final screen needed, adjusting according to the client's feedback as
+                        necessary.
+                    </p>
+                    <p>My primary contributions were:</p>
+                    <ul>
+                        <li>Designing finalized versions of every screen using Photoshop and Figma</li>
+                        <li>Creating the base page templates and global CSS file</li>
+                        <li>Coding the nav bar and footer</li>
+                        <li>Ensuring website styling remained consistent and that pages remained mobile friendly</li>
+                        <li>Implementing light and dark mode</li>
+                        <li>Creating custom graphics</li>
+                        <li>Writing documentation for future developers</li>
+                    </ul>
+                </div>
+                <div class="project-carousel">
+                    <img src="img/afs-catalogue-light.webp" alt="Screenshot of AFS Catalogue Light Mode">
+                    <div class="flex">
+                        <img src="img/afs-catalogue-dark.webp" alt="Screenshot of AFS Catalogue Dark Mode">
+                        <img src="img/afs-login-dark.webp" alt="Screenshot of Login Page">
+                        <img src="img/afs-checkout-dark.webp" alt="Screenshot of Checkout Page">
+                        <img src="img/afs-order-success-dark.webp" alt="Screenshot of Order Success Page">
+                    </div>
+                </div>
+                <div>
+                    <details class="mockups">
+                        <summary>Click to View Mockup Examples</summary>
+                        <div class="flex mockup-images">
+                            <img src="img/afs-card-mockups.webp" alt="Mockup of AFS Cards">
+                            <img src="img/afs-screen-mockup.webp" alt="Mockup of AFS Cards">
+                        </div>
+                    </details>
                 </div>
             </div>
-        </div>
-        <!-- Mobile Only/Hamburger Menu Items -->
-        <div id="hamburger-menu" class="text-center d-xl-none fs-5 collapse mt-1">
-            {% if request.user.is_authenticated %}
-            <!-- Mobile Logged In View-->
-            <ul class="logged-in pb-2">
-                <li>Welcome {{ request.user.username }}!</li>
-                <li>
-                    <form id="logout-mobile-form" method="post" action="{% url 'logout' %}">
-                        {% csrf_token %}
-                        <button type="submit" class="logout">Log Out</button>
-                    </form>
-                </li>
-            </ul>
-            {% else %}
-            <!-- Mobile Logged Out View -->
-            <ul class="logged-out d-flex justify-content-center align-content-center gap-3 pb-3">
-                <li><a class="login p-1 px-3" href="{% url 'login' %}">Log In</a></li>
-                <li><a href="{% url 'register' %}" class="p-1">Sign Up</a></li>
-            </ul>
-            {% endif %}
-            <ul class="pt-2">
-                <li><a href="{% url 'external_site' %}">Catalogue</a></li>
-                <li><a href="{% url 'checkout:checkout' %}">Checkout</a></li>
-            </ul>
-        </div>
-    </nav>
-    {% block content %}{% endblock %}
+        </section>
+        <div class="lightswitch-container"><i class="bi lightswitch"></i></div>
+    </main>
+    <footer>
+        <p>© <span></span> | Created by Cherisse Rogers</p>
+        <p><sup><a href="#header">Return to top <i class="bi bi-arrow-up-circle"></i></a></sup></p>
+    </footer>
 </body>
-<script>
-    // Add CSRF token to all HTMX requests (Django)
-    document.body.addEventListener('htmx:configRequest', function (event) {
-        event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
-    });
-
-    // Adds text decoration to the nav link of page the user is currently on
-    // By giving 'active' class to link matching the document title
-    let title = document.title;
-    let navLinks = document.querySelectorAll(".nav-list-1 li a");
-    function styleNavLinks(title) {
-        navLinks.forEach((link) => {
-            if (
-                link.textContent == title.substring(0, link.textContent.length)
-            ) {
-                link.classList.add('active');
-            }
-        });
-    }
-    styleNavLinks(title);
-
-    // Theme Application
-    const ICONS = {
-        dark: { add: 'bi-sun-fill', remove: 'bi-moon-stars-fill' },
-        light: { add: 'bi-moon-stars-fill', remove: 'bi-sun-fill' },
-    };
-
-    function applyTheme(theme) {
-        document.documentElement.dataset.theme = theme;
-        localStorage.setItem('theme', theme);
-
-        const { add, remove } = ICONS[theme];
-        document.querySelectorAll('.lightswitch').forEach(el => {
-            el.classList.replace(remove, add) || el.classList.add(add);
-        });
-    }
-
-    // Toggles between light and dark mode
-    function toggleTheme() {
-        const current = document.documentElement.dataset.theme;
-        applyTheme(current === 'dark' ? 'light' : 'dark');
-
-        // Re-render reCAPTCHA if present
-        const captcha = document.querySelector('.g-recaptcha');
-        if (captcha && typeof grecaptcha !== 'undefined') {
-            captcha.innerHTML = '';
-            grecaptcha.render(captcha, {
-                sitekey: captcha.dataset.sitekey,
-                theme: document.documentElement.dataset.theme,
-                size: 'normal',
-            });
-        }
-    }
-
-    // Listeners
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        if (!localStorage.getItem('theme')) applyTheme(e.matches ? 'dark' : 'light');
-    });
-
-    document.querySelectorAll('.lightswitch').forEach(el =>
-        el.addEventListener('click', toggleTheme)
-    );
-
-    // Initializes the theme
-    applyTheme(getInitialTheme());
-</script>
-
-</html>
