@@ -2,6 +2,7 @@
 Welcome to my personal portfolio website! As I'm a year into my programming journey and a student, I'm just being a little silly with it.
 
  TODO List:
+ - Document this properly/fix README
  - ~~Add Github icon + link on nav bar~~
  - ~~Finish cards for project display~~
  - ~~Once mobile view is complete, properly media query for other screen sizes~~
@@ -11,6 +12,8 @@ Welcome to my personal portfolio website! As I'm a year into my programming jour
  - ~~More 'pizzazz'! Like panels that grow slightly when hovered over~~
  - ~~Improve site accessibility, add backup font in case Google Fonts don't load, etc~~
  - ~~Convert imgs to better filetypes~~
+ - Add Year of Project Creation over cards
+- Make carousel for projects
 
  BONUS:
  - ~~Add Javascript for a more responsive site~~
@@ -20,5 +23,4 @@ Welcome to my personal portfolio website! As I'm a year into my programming jour
  - ~~Add a "Dark" mode that is triggered with the click of a moon symbol (or something like that)~~
  - Add "Github" dev log/commit history, if possible
  - ~~Fix and simplify JS for dark mode~~
- - Make carousel for projects
  - Enable user to click on project photo and open modal window for image viewing
