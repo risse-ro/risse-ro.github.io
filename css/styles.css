@@ -336,10 +336,10 @@ ul.tags li:hover {
 }
 
 .lightswitch.mobile {
-    z-index: 5;
+    z-index: 1;
     position: absolute;
     right: 1rem;
-    top: 14rem;
+    top: 13rem;
 }
 
 /* Resume Page */
