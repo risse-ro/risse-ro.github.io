@@ -8,6 +8,7 @@
     --link: #ee5119;
     --accent: #fd7e0e;
     --gradient: #f86257;
+    --button: #b43030;
     --header: #f5425a;
 }
 
@@ -20,6 +21,7 @@
     --link: #ef91e1;
     --accent: #503fa8;
     --gradient: #5f39a7;
+    --button: #402179;
     --header: #5a2a84;
 }
 
@@ -235,14 +237,64 @@ section div.notice {
     width: 100%;
     margin: 2rem auto;
     border-radius: 30px;
-    overflow: hidden;
     transition: 0.5s;
+}
+
+.card-section>div img {
+    overflow: hidden;
+    border-radius: 30px 30px 0 0;
 }
 
 .card-section h3 {
     margin: 0.5rem 0;
     font-size: 2rem;
     text-align: center;
+}
+
+.card-section a.link {
+    display: block;
+    color: var(--header-text);
+    background-color: var(--button);
+    font-weight: bold;
+    padding: 0.75rem;
+    margin-top: auto;
+    opacity: 80%;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.card-section a.link:hover {
+    opacity: 100%;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.card-container {
+    position: relative;
+}
+
+.card-item {
+    height: 100%;
+    overflow: clip;
+    border-radius: 0 0 30px 30px;
+}
+
+.card-item:has(a) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* for overhanging date tag */
+.project-date {
+    background-color: var(--button);
+    color: var(--header-text);
+    font-weight: bold;
+    font-size: 0.85rem;
+    position: absolute;
+    right: -10px;
+    top: -15px;
+    z-index: 1;
+    padding: 0.25rem 1rem;
+    border-radius: 16px;
 }
 
 .card-text {
@@ -293,9 +345,9 @@ span.bold {
 }
 
 ul.tags li {
-    color: var(--section);
-    background-color: var(--text);
-    opacity: 60%;
+    color: var(--header-text);
+    background-color: var(--button);
+    opacity: 65%;
     justify-content: center;
     padding: 0.30rem 0.60rem;
     margin: 0 0.25rem 0.5rem 0.25rem;
