@@ -271,16 +271,18 @@ section div.notice {
     position: relative;
 }
 
-.card-item {
-    height: 100%;
-    overflow: clip;
-    border-radius: 0 0 30px 30px;
-}
+#projects {
+    .card-item {
+        height: 100%;
+        overflow: clip;
+        border-radius: 0 0 30px 30px;
+    }
 
-.card-item:has(a) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    .card-item:has(a) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 
 /* for overhanging date tag */
@@ -357,11 +359,6 @@ ul.tags li {
 .roles .tags li {
     color: var(--header-text);
     background-color: var(--header);
-}
-
-.project-details .tags {
-    max-width: 405px;
-    margin: 0 auto;
 }
 
 ul.tags li:hover {
@@ -663,7 +660,7 @@ ul.tags li:hover {
     }
 
     .card-section>div:hover {
-        transform: scale(105%);
+        transform: scale(104%);
         background-image: linear-gradient(var(--gradient), var(--gradient));
     }
 
@@ -806,6 +803,11 @@ ul.tags li:hover {
     .project-carousel .flex img {
         width: 49.5%;
     }
+
+    .project-details .tags {
+        max-width: 370px;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -841,7 +843,12 @@ ul.tags li:hover {
     }
 
     .mockup-images img {
-        max-width: 50%;
+        max-width: 49%;
+    }
+
+    .mockups>div>img {
+        margin-top: 1rem;
+        width: 99%;
     }
 }
 
