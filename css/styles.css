@@ -538,7 +538,7 @@ ul.tags li:hover {
 }
 
 .project-details {
-    align-items: center;
+    align-items: start;
     justify-content: space-evenly;
 }
 
@@ -570,6 +570,10 @@ ul.tags li:hover {
 
 .mockup-images {
     gap: 1rem;
+}
+
+.mediapad .project-carousel .flex img {
+    width: 32%;
 }
 
 /* Media Queries */
