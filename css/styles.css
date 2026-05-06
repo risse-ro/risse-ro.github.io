@@ -521,6 +521,11 @@ ul.tags li:hover {
 }
 
 /* Project Pages */
+.project {
+    position: relative;
+    margin: 3.5rem auto 3rem auto;
+}
+
 .project section {
     margin: 0 0 1rem 0;
 }
@@ -529,12 +534,21 @@ ul.tags li:hover {
     list-style: inside;
 }
 
-.project h3,
 .project-details h4 {
     color: var(--text);
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 0.25rem;
+}
+
+.project h3 {
+    background-color: var(--header);
+    color: var(--header-text);
+    position: absolute;
+    top: -1.5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 30px 30px 0 0;
+    width: 100%;
 }
 
 .project-details {
@@ -787,12 +801,7 @@ ul.tags li:hover {
     /* Project Pages */
     .info {
         width: 50%;
-        padding: 1rem;
-    }
-
-    .project h3 {
-        color: var(--text);
-        margin-bottom: 1rem;
+        padding: 1rem 2rem;
     }
 
     .project-carousel {
@@ -809,7 +818,7 @@ ul.tags li:hover {
     }
 
     .project-details .tags {
-        max-width: 370px;
+        max-width: 335px;
         margin: 0 auto;
     }
 }
@@ -842,10 +851,6 @@ ul.tags li:hover {
         width: 60%;
     }
 
-    .project {
-        max-width: 1536px;
-    }
-
     .mockup-images img {
         max-width: 49%;
     }
@@ -864,6 +869,10 @@ ul.tags li:hover {
     .homepage section:nth-of-type(-n + 1) {
         margin: 8rem auto 0 auto;
         max-width: 1050px;
+    }
+
+    .project {
+        max-width: 1536px;
     }
 
     .about-text>div.flex {
