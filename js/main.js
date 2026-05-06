@@ -83,7 +83,7 @@ function setThemedIcons() {
             element.classList.remove('bi-moon-stars-fill');
             element.classList.add('bi-sun-fill');
         });
-        if (pathname == '/') {
+        if (pathname == '/' || pathname == '#projects') {
             selfiePic.src = 'img/selfie-night.webp';
         }
     }
@@ -92,7 +92,7 @@ function setThemedIcons() {
             element.classList.remove('bi-sun-fill');
             element.classList.add('bi-moon-stars-fill');
         });
-        if (pathname == '/') {
+        if (pathname == '/' || pathname == '#projects') {
             selfiePic.src = 'img/selfie-day.webp';
         }
     }
