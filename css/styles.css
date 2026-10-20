@@ -597,6 +597,12 @@ ul.tags li:hover {
     width: 32%;
 }
 
+.github-link {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
 /* Base styles for the native dialog box */
 #image-dialog {
     border: none;
@@ -648,6 +654,7 @@ dialog:focus-visible {
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
 }
 
 .close-btn:hover {
