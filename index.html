@@ -189,10 +189,11 @@
                     <div class="card-item">
                         <div class="image-container">
                             <p class="project-date">Apr 2026</p>
-                            <img src="img/mediapad-preview.webp" alt="Screenshot of MediaPad App screens">
+                            <img class="no-dialog" src="img/mediapad-preview.webp"
+                                alt="Screenshot of MediaPad App screens">
                         </div>
                         <div class="card-text">
-                            <h3>MediaPad App</h3>
+                            <h3><a href="mediapad-app.html">MediaPad App</a></h3>
                             <ul class="tags mobile-flex">
                                 <li>Dart</li>
                                 <li>Flutter</li>
@@ -215,7 +216,7 @@
                 <div class="card-container">
                     <div class="card-item">
                         <p class="project-date">Jan 2026 - Apr 2026</p>
-                        <img src="img/afs-catalogue-light.webp" alt="Screenshot of the AFS catalogue">
+                        <img class="no-dialog" src="img/afs-catalogue-light.webp" alt="Screenshot of the AFS catalogue">
                         <div class="card-text">
                             <h3><a href="afs-catalogue-website.html">AFS Catalogue Website</a></h3>
                             <ul class="tags mobile-flex">
@@ -242,7 +243,7 @@
                 <div class="card-container">
                     <p class="project-date">Nov 2025</p>
                     <div class="card-item">
-                        <img src="img/bikes-r-us-checkout.webp"
+                        <img class="no-dialog" src="img/bikes-r-us-checkout.webp"
                             alt="Screenshot of this website with both the light and dark theme on display">
                         <div class="card-text">
                             <h3><a href="bikes-r-us-project.html">BikesRUs Project (Sales + Returns)</a></h3>
@@ -264,7 +265,7 @@
                 <div class="card-container">
                     <div class="card-item">
                         <p class="project-date">2025 (ongoing)</p>
-                        <img src="img/portfolio-site-screenshot.webp"
+                        <img class="no-dialog" src="img/portfolio-site-screenshot.webp"
                             alt="Screenshot of this website with both the light and dark theme on display">
                         <div class="card-text">
                             <h3>...This Website!</h3>
@@ -285,6 +286,12 @@
             </div>
         </section>
         <div class="lightswitch-container"><i class="bi lightswitch"></i></div>
+        <dialog id="image-dialog">
+            <form method="dialog">
+                <button class="close-btn" aria-label="Close dialog"><i class="bi bi-x"></i></button>
+            </form>
+            <img src="" alt="Dialog image popup" id="dialog-img" />
+        </dialog>
     </main>
     <footer>
         <p>© <span></span> | Created by Cherisse Rogers</p>

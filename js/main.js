@@ -108,6 +108,35 @@ lightSwitch.forEach((element) => element.addEventListener('click', switchTheme, 
 
 // img click
 
+// Dialog Popup Window
+// Select the dialog and the target image slot inside it
+const dialog = document.getElementById("image-dialog");
+const dialogImg = document.getElementById("dialog-img");
+
+// Attach a listener to the entire document (Event Delegation)
+document.addEventListener("click", (event) => {
+    // Check if the clicked item is an image and NOT already inside the dialog
+    if (
+        event.target.tagName === "IMG" &&
+        !dialog.contains(event.target) &&
+        !event.target.classList.contains("no-dialog")
+    ) {
+        // Copy the clicked image's source and alt text into the dialog elements
+        dialogImg.src = event.target.src;
+        dialogImg.alt = event.target.alt;
+
+        // Open the native HTML dialog
+        dialog.showModal();
+    }
+});
+
+// Close the dialog automatically if a user clicks outside the image container
+dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+        dialog.close();
+    }
+});
+
 
 autoExpandNav();
 setThemedIcons();
