@@ -933,6 +933,10 @@ dialog:focus-visible {
         width: 60%;
     }
 
+    .mockups summary {
+        font-size: 1.5rem;
+    }
+
     .mockup-images img {
         max-width: 49%;
     }
