@@ -593,6 +593,10 @@ ul.tags li:hover {
     gap: 1rem;
 }
 
+.mockup-images:hover {
+    cursor: pointer;
+}
+
 .mediapad .project-carousel .flex img {
     width: 32%;
 }
@@ -882,7 +886,8 @@ dialog:focus-visible {
     }
 
     .project-carousel {
-        width: 50%;
+        width: 40%;
+        margin: 1rem auto;
     }
 
     .project-carousel .flex {
