@@ -593,7 +593,7 @@ ul.tags li:hover {
     gap: 1rem;
 }
 
-.mockup-images:hover {
+.mockups img:hover {
     cursor: pointer;
 }
 
@@ -603,6 +603,7 @@ ul.tags li:hover {
 
 .github-link {
     display: block;
+    font-size: 1.2rem;
     text-align: center;
     font-weight: bold;
 }
