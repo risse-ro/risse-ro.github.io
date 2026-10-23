@@ -124,7 +124,7 @@ a,
 a:link,
 a:visited {
     color: var(--link);
-    transition: color 0.2s, background-color 0.2s;
+    transition: color 0.2s, background-color 0.2s, text-shadow 0.2s;
 }
 
 a:hover,
@@ -158,6 +158,11 @@ main h2 {
     margin: 2rem 0;
     font-size: 2rem;
     text-align: center;
+    text-shadow: 0 0 6px transparent;
+}
+
+header h2:hover {
+    text-shadow: 0 0 6px #fae099;
 }
 
 main .fancy-section h3 {
@@ -593,12 +598,21 @@ ul.tags li:hover {
     gap: 1rem;
 }
 
-.mockups img:hover {
+.mockups img:hover,
+.graphics img:hover {
     cursor: pointer;
 }
 
 .mediapad .project-carousel .flex img {
     width: 32%;
+}
+
+.graphics {
+    margin-top: 0.5rem;
+    width: 35%;
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
 }
 
 .github-link {
